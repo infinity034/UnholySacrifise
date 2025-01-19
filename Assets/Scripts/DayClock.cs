@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,35 +15,36 @@ public class DayClock : MonoBehaviour
     private TextMeshProUGUI dayClockTxt;
 
     [SerializeField]
-    private float[] fillAmount = { 1f, 0.75f, 0.5f, 0.25f, 0f };
+    private int day = 1;
 
-    [SerializeField]
-    private int day = 1, dayQuarter = 0;
+    public float FillAmount { get { return imageFill.fillAmount; } }
 
     private void Start()
     {
-        SetDayClock(day, dayQuarter);
+        SetDayClock();
     }
 
-    private void SetDayClock(int day, int dayQuarter)
+    private void SetDayClock()
     {
-        SetFill(dayQuarter);
         dayClockTxt.text = "Day " + day;
+        StartCoroutine(ShowDayFill());
     }
 
-    private void SetFill(int dayQuarter)
+    private IEnumerator ShowDayFill()
     {
-        StartCoroutine(ShowDayFill(fillAmount[dayQuarter]));
-    }
-
-    private IEnumerator ShowDayFill(float goTo)
-    {
+        float count = 0;
         do
         {
-            imageFill.fillAmount -= 0.001f;
-            yield return new WaitForSeconds(0.1f);
-        }while (imageFill.fillAmount >= fillAmount[dayQuarter]);
-
-        imageFill.fillAmount = goTo;
+            imageFill.fillAmount = 1f - (count / 60f);
+            count++;
+            if(count > 60)
+            {
+                count = 0;
+                day++;
+                dayClockTxt.text = "Day " + day;
+                imageFill.fillAmount = 1f;
+            }
+            yield return new WaitForSeconds(1f);
+        }while (day < 4);
     }
 }
