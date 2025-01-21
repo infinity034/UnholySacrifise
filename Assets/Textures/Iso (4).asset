@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Iso (4)
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 3625043607559282579, guid: 19fb86013d8c24d6cb8410c0aadf30fa, type: 3}
-  m_Color: {r: 0.33374867, g: 0.71805096, b: 0.9433962, a: 1}
+  m_Color: {r: 0.9150943, g: 0.75166905, b: 0.45323068, a: 1}
   m_Transform:
     e00: 1
     e01: 0
