@@ -15,7 +15,10 @@ public class DayClock : MonoBehaviour
     private TextMeshProUGUI dayClockTxt;
 
     [SerializeField]
-    private int day = 1;
+    private int day = 1, maxDay = 4;
+
+    [SerializeField]
+    private float dayTime;
 
     public float FillAmount { get { return imageFill.fillAmount; } }
 
@@ -35,9 +38,9 @@ public class DayClock : MonoBehaviour
         float count = 0;
         do
         {
-            imageFill.fillAmount = 1f - (count / 60f);
+            imageFill.fillAmount = 1f - (count / dayTime);
             count++;
-            if(count > 60)
+            if(count > dayTime)
             {
                 count = 0;
                 day++;
@@ -45,6 +48,6 @@ public class DayClock : MonoBehaviour
                 imageFill.fillAmount = 1f;
             }
             yield return new WaitForSeconds(1f);
-        }while (day < 4);
+        }while (day < maxDay);
     }
 }

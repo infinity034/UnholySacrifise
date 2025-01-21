@@ -3,18 +3,25 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController Instance;
+
     private PlayerControls playerControls;
 
     [SerializeField]
     private Rigidbody2D rb;
 
     [SerializeField]
+    private Transform body;
+
+    [SerializeField]
     private Vector2 movement;
 
     public float speed;
+    public PlayerControls PlayerControls { get { return playerControls; } }
 
     private void Awake()
     {
+        Instance = this;
         playerControls = new PlayerControls();
     }
 
@@ -41,7 +48,7 @@ public class PlayerController : MonoBehaviour
         if(movement != Vector2.zero)
         {
             float angle = Mathf.Atan2 (movement.y,movement.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0,0,angle - 90f);
+            body.rotation = Quaternion.Euler(0,0,angle - 90f);
         }
     }
 }
