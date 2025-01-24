@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E2E93075-199A-4205-828C-B39C4DF125E2}" SchemaVersion="123" RootDocumentID="{093DD4FE-25F5-4C4C-AC7F-143423DF7C69}" ParentDocumentID="{093DD4FE-25F5-4C4C-AC7F-143423DF7C69}">
+	<SoundBanks>
+		<WorkUnit Name="UI" ID="{E2E93075-199A-4205-828C-B39C4DF125E2}" OwnerID="{093DD4FE-25F5-4C4C-AC7F-143423DF7C69}" PersistMode="Nested">
+			<ChildrenList>
+				<Folder Name="Menu" ID="{94A321A2-0759-45BA-A395-176EDAEE47C4}" ShortID="764883145"/>
+				<Folder Name="Dagger" ID="{C914535C-E676-413A-97F8-72F55B8623C4}" ShortID="228831921"/>
+				<Folder Name="Doomsday Clock" ID="{68F1AB5A-82BD-4CAD-9A9C-C39AC87587FD}" ShortID="209904209"/>
+				<Folder Name="Score" ID="{B0DD0F9E-72F2-40D9-841C-7D6418FCCAE0}" ShortID="811673340">
+					<ChildrenList>
+						<SoundBank Name="Score" ID="{F2939F12-0884-4FFF-81D5-ECEA5400529D}">
+							<ObjectInclusionList/>
+							<ObjectExclusionList/>
+							<GameSyncExclusionList/>
+						</SoundBank>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Lookout Level" ID="{60CD1AF5-8079-4D08-AE35-A0EAF535154E}" ShortID="401062808"/>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

@@ -1,0 +1,80 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3060491804",
+    "Type": "User",
+    "GUID": "{BC21FF2E-2CE5-4785-A9EA-1BA2AF1C6FD6}",
+    "Language": "SFX",
+    "Hash": "{0C541E5E-4BDC-1F05-492C-6059B16ADD0A}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Location\\Ambiance\\TEST_AMB",
+    "ShortName": "TEST_AMB",
+    "Path": "TEST_AMB.bnk",
+    "Media": [
+     {
+      "Id": "79503460",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Drone PH 4.wav",
+      "CachePath": "F4/{F44EFF29-BDCE-ED16-6113-D96597B7F9D9}.wem"
+     },
+     {
+      "Id": "173636986",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Drone PH.wav",
+      "CachePath": "61/{61E589ED-67CD-3B5A-6A16-4E37256D31EA}.wem"
+     },
+     {
+      "Id": "309662540",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Drone PH 2.wav",
+      "CachePath": "16/{16BA8193-98F4-FBBE-61D3-E904B76CE164}.wem"
+     },
+     {
+      "Id": "664939833",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Drone PH 3.wav",
+      "CachePath": "8A/{8A93385A-F2BA-80FE-3445-F3A55290316D}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2959533290",
+      "Name": "Play_Amb",
+      "ObjectPath": "\\Events\\Default Work Unit\\Location\\Ambiance\\Play_Amb",
+      "GUID": "{DFBD8E39-2252-4811-AB6F-2A7B05730964}",
+      "DurationType": "OneShot",
+      "DurationMin": "35.90839",
+      "DurationMax": "35.90839",
+      "MediaRefs": [
+       {
+        "Id": "79503460"
+       },
+       {
+        "Id": "173636986"
+       },
+       {
+        "Id": "309662540"
+       },
+       {
+        "Id": "664939833"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{50F011AB-16E3-1370-DBBF-DB952B83B77F}"
+ }
+}

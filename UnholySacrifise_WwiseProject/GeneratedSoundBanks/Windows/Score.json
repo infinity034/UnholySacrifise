@@ -1,0 +1,21 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "2398231425",
+    "Type": "User",
+    "GUID": "{F2939F12-0884-4FFF-81D5-ECEA5400529D}",
+    "Language": "SFX",
+    "Hash": "{8F212308-E7A1-6013-040D-A682EC0BAA11}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\UI\\Score\\Score",
+    "ShortName": "Score",
+    "Path": "Score.bnk"
+   }
+  ],
+  "FileHash": "{EBAFEB46-7F25-C158-6B21-633B97CA2DBC}"
+ }
+}

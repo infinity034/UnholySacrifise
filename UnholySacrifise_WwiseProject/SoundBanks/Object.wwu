@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8FEBD519-7B51-40D2-AA7C-A496C216E81E}" SchemaVersion="123" RootDocumentID="{093DD4FE-25F5-4C4C-AC7F-143423DF7C69}" ParentDocumentID="{093DD4FE-25F5-4C4C-AC7F-143423DF7C69}">
+	<SoundBanks>
+		<WorkUnit Name="Object" ID="{8FEBD519-7B51-40D2-AA7C-A496C216E81E}" OwnerID="{093DD4FE-25F5-4C4C-AC7F-143423DF7C69}" PersistMode="Nested">
+			<ChildrenList>
+				<Folder Name="Item" ID="{784529C2-B2B1-4F8A-9BAD-F8D8CAC8DBC3}" ShortID="137549768">
+					<ChildrenList>
+						<Folder Name="Gold Pieces" ID="{B3D1065A-9AEE-48AF-8190-30A1DEC6D57F}" ShortID="873933750"/>
+						<Folder Name="Needle" ID="{54FED4E3-0B5E-4CC6-8552-20B6AE9DB5FA}" ShortID="290150782"/>
+						<Folder Name="PIzza" ID="{22FDA02F-9083-424C-820E-2132BD73DE60}" ShortID="651894381"/>
+						<Folder Name="Contract" ID="{00DC77A1-2173-435D-8064-D799856D182F}" ShortID="357219282"/>
+						<Folder Name="Fish" ID="{B9FF694C-4C17-440E-84BD-B98E0EF4B524}" ShortID="510948931"/>
+						<Folder Name="Salt" ID="{11D96112-1CD1-4A0E-A503-08943C964B3C}" ShortID="136016111"/>
+						<Folder Name="Bottle of Aclohol" ID="{E33E7FB2-6B54-4EF4-B2E5-93A63FDB4C06}" ShortID="283976626"/>
+						<Folder Name="Ink" ID="{B8CF27AF-76A9-4FE8-BE0C-F213572BF2B3}" ShortID="621336106"/>
+						<SoundBank Name="TEST_Item" ID="{8B2F54CE-C862-4A34-95FF-9A4A26261B25}">
+							<ObjectInclusionList>
+								<ObjectRef Name="Play_Item" ID="{1C8A3266-5688-4050-886D-E88E5456F225}" WorkUnitID="{E6C462C3-6632-4C6C-9239-0BEB3B13F9CE}" Origin="Manual" Filter="7"/>
+							</ObjectInclusionList>
+							<ObjectExclusionList/>
+							<GameSyncExclusionList/>
+						</SoundBank>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Event" ID="{4BD37ADF-95FF-4D05-8036-0C299218CDAC}" ShortID="135192580">
+					<ChildrenList>
+						<Folder Name="Altar" ID="{ED58070F-76C9-4E26-93B7-0D2CE99BE874}" ShortID="159145374"/>
+						<Folder Name="Library" ID="{789B8429-BAD6-42BC-85EC-155A7F5FE107}" ShortID="794129785"/>
+						<Folder Name="Cart" ID="{EF545522-9ACE-4537-A5A8-68637B2012B1}" ShortID="268836176"/>
+						<Folder Name="Bed" ID="{B33BD3F2-6FC0-4F3F-99B4-4A01D5019E86}" ShortID="71553430"/>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
