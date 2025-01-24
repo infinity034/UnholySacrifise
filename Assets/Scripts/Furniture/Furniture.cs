@@ -5,11 +5,11 @@ using UnityEngine;
 public class Furniture : MonoBehaviour
 {
     [SerializeField]
-    protected Collider2D Collider2D;
+    protected Collider2D collider2D;
 
     protected virtual void Start()
     {
-        Collider2D = GetComponent<Collider2D>();
+        collider2D = GetComponent<Collider2D>();
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
