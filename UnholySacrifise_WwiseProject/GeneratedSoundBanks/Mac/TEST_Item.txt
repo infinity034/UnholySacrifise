@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	698828439	Play_Item			\Default Work Unit\Object\Item\Play_Item	
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	7989128	PH	Wwise Tone Generator		\Actor-Mixer Hierarchy\Default Work Unit\Character\Hero\Action\Hide\Barrel\PH	
+

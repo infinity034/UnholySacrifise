@@ -4,6 +4,13 @@
   "BasePlatform": "Web",
   "PluginLibs": [
    {
+    "LibName": "Wwise Tone Generator",
+    "LibId": "6684674",
+    "Type": "Source",
+    "DLL": "AkToneGen",
+    "StaticLib": "AkToneSource"
+   },
+   {
     "LibName": "System",
     "LibId": "11403271",
     "Type": "AudioDevice"
@@ -14,6 +21,6 @@
     "Type": "AudioDevice"
    }
   ],
-  "FileHash": "{153FC485-16FD-C456-638C-A1C40A8E5AD6}"
+  "FileHash": "{96FDCCDD-FBFA-9211-E497-9D37D1160677}"
  }
 }

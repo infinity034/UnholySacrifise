@@ -13,13 +13,72 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID PLAY_AMB_TEST = 2976252989U;
+        static const AkUniqueID PLAY_AMB = 2959533290U;
+        static const AkUniqueID PLAY_ITEM = 698828439U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace KARMA
+        {
+            static const AkUniqueID GROUP = 1828612423U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace KARMA
+
+        namespace TIME
+        {
+            static const AkUniqueID GROUP = 2654366170U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace TIME
+
+    } // namespace STATES
+
+    namespace SWITCHES
+    {
+        namespace KARMA
+        {
+            static const AkUniqueID GROUP = 1828612423U;
+
+            namespace SWITCH
+            {
+            } // namespace SWITCH
+        } // namespace KARMA
+
+        namespace LOCATION
+        {
+            static const AkUniqueID GROUP = 1176052424U;
+
+            namespace SWITCH
+            {
+            } // namespace SWITCH
+        } // namespace LOCATION
+
+        namespace TERRAIN
+        {
+            static const AkUniqueID GROUP = 354267144U;
+
+            namespace SWITCH
+            {
+            } // namespace SWITCH
+        } // namespace TERRAIN
+
+    } // namespace SWITCHES
 
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID TEST = 3157003241U;
+        static const AkUniqueID SCORE = 2398231425U;
+        static const AkUniqueID TEST_AMB = 3060491804U;
+        static const AkUniqueID TEST_ITEM = 2878463329U;
+        static const AkUniqueID TEST_MUSIC = 379521629U;
     } // namespace BANKS
 
     namespace BUSSES

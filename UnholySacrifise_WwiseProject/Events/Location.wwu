@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<Folder Name="Ambiance" ID="{9D83BDB0-F3B1-4688-9CEF-8BE4CC752B3E}" ShortID="226031298">
 					<ChildrenList>
-						<Event Name="Play_Amb_Test" ID="{DFBD8E39-2252-4811-AB6F-2A7B05730964}">
+						<Event Name="Play_Amb" ID="{DFBD8E39-2252-4811-AB6F-2A7B05730964}">
 							<ChildrenList>
 								<Action Name="" ID="{2A5BAC1C-29BF-4616-8EC4-F0ED2734820F}" ShortID="765859250">
 									<ReferenceList>
@@ -16,6 +16,11 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Music" ID="{50B4A78E-ED47-44D8-AAB5-4082EA1AC7B6}" ShortID="57516428">
+					<ChildrenList>
+						<Event Name="Play_Music" ID="{C69C9A3F-8FBD-4201-AE23-8D2884EC5743}"/>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
