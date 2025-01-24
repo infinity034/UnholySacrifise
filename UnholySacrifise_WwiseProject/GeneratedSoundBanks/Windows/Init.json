@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1355168291",
+    "Type": "User",
+    "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
+    "Language": "SFX",
+    "Hash": "{17DC3F27-66B0-6853-8149-1842B67A3C67}",
+    "ObjectPath": "Init",
+    "ShortName": "Init",
+    "Path": "Init.bnk",
+    "Plugins": {
+     "AudioDevices": [
+      {
+       "Id": "2317455096",
+       "Name": "No_Output",
+       "ObjectPath": "\\Audio Devices\\Default Work Unit\\No_Output",
+       "GUID": "{7FE0693F-00F9-4C26-B987-C89386A3A8A6}",
+       "LibName": "No Output",
+       "LibId": "11862023"
+      },
+      {
+       "Id": "3859886410",
+       "Name": "System",
+       "ObjectPath": "\\Audio Devices\\Default Work Unit\\System",
+       "GUID": "{8C4D067B-E1CB-4C48-A9BA-D8B077465CF6}",
+       "LibName": "System",
+       "LibId": "11403271"
+      }
+     ]
+    },
+    "Busses": [
+     {
+      "Id": "436743010",
+      "Name": "Character",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Character",
+      "GUID": "{9A1B9D6B-068F-45CA-AD87-C980E566AF0D}"
+     },
+     {
+      "Id": "1176052424",
+      "Name": "Location",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Location",
+      "GUID": "{595990E7-CE4E-4697-8465-055B1013B3F7}"
+     },
+     {
+      "Id": "1203869867",
+      "Name": "Music Buss",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Music Buss",
+      "GUID": "{1A23F102-AAA4-4A50-BEC9-9965D02CFC4C}"
+     },
+     {
+      "Id": "3055412916",
+      "Name": "Object",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Object",
+      "GUID": "{848314DE-88E2-44E1-8100-7187EC53BB05}"
+     },
+     {
+      "Id": "3803692087",
+      "Name": "Master Audio Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{6C71BACB-D22D-ABF8-F6E0-3204C0093508}"
+ }
+}

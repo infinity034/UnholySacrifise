@@ -12,8 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5d97caf07a9510468d8af52388622c0, type: 3}
   m_Name: AkWwiseInitializationSettings
   m_EditorClassIdentifier: 
-  PlatformSettingsNameList: []
-  PlatformSettingsList: []
+  PlatformSettingsNameList:
+  - Mac
+  - Web
+  - Windows
+  PlatformSettingsList:
+  - {fileID: 11400000, guid: 22e34ef375fe6bc408625e88d147ddbc, type: 2}
+  - {fileID: 11400000, guid: 74f30c1b356244a4b84f27d22c50f5f6, type: 2}
+  - {fileID: 11400000, guid: 732e047974b96e047816e3dceb085789, type: 2}
   InvalidReferencePlatforms: []
   UserSettings:
     m_BasePath: Audio\GeneratedSoundBanks
