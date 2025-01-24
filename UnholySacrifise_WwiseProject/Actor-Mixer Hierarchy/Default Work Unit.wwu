@@ -6,6 +6,7 @@
 				<WorkUnit Name="Location" ID="{5796FE29-40F8-4439-A082-763AACA67460}" PersistMode="Reference"/>
 				<WorkUnit Name="Character" ID="{5A1647B3-CD7E-4915-B5B9-04F6E82B8118}" PersistMode="Reference"/>
 				<WorkUnit Name="Object" ID="{B9BF0CAB-8997-4028-821D-4D32F0939BED}" PersistMode="Reference"/>
+				<WorkUnit Name="UI" ID="{AEEC053D-330E-44D6-9458-D53CBB632358}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

@@ -117,9 +117,30 @@
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</ActorMixer>
+						<Folder Name="Cabin" ID="{646E800A-A5BA-4B99-A15A-AB7A27F3D4B0}" ShortID="17519054"/>
+						<Folder Name="Town" ID="{EE54648A-395A-443F-9AB7-74E6EEDF1172}" ShortID="393485657"/>
+						<Folder Name="Forest" ID="{FF0F55F1-B4D1-4DE4-ADBE-F3353B0D480B}" ShortID="781009729"/>
+						<Folder Name="Tavern" ID="{5C8CB224-AA3F-442A-BCAF-75A271105D18}" ShortID="949816181">
+							<ChildrenList>
+								<Folder Name="Inn" ID="{4CDC6189-57CF-42A0-B339-308AAA6EEC06}" ShortID="524209452"/>
+								<Folder Name="Kitchen" ID="{B4792308-432D-432F-9C5F-0CFFACDE5A4E}" ShortID="169930205"/>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="Music" ID="{8B6843C2-EDE5-4844-BD49-EADE6AA84673}" ShortID="344810379"/>
+				<Folder Name="Music" ID="{8B6843C2-EDE5-4844-BD49-EADE6AA84673}" ShortID="344810379">
+					<ChildrenList>
+						<Folder Name="Cabin" ID="{5065C563-EC6E-4BD0-9D7E-92F1BE9CE200}" ShortID="89825072"/>
+						<Folder Name="Forest" ID="{2004BF58-F415-46E6-B4C4-F4212A4F8568}" ShortID="894051518"/>
+						<Folder Name="Tavern" ID="{88BBA415-DC35-4FF6-84A6-F84552DED9D8}" ShortID="946008024">
+							<ChildrenList>
+								<Folder Name="Inn" ID="{50321B13-E3D4-4938-AF5A-34CBEC6BBFC7}" ShortID="760691433"/>
+								<Folder Name="Kitchen" ID="{9A31F7E2-D9E7-47BC-80B1-428BC404DD47}" ShortID="139896882"/>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Town" ID="{C5F8E793-BD9F-416D-B010-01AEF5015A31}" ShortID="223154727"/>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

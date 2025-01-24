@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{AEEC053D-330E-44D6-9458-D53CBB632358}" SchemaVersion="123" RootDocumentID="{02F01299-C935-4762-829F-53CE34FE07A9}" ParentDocumentID="{02F01299-C935-4762-829F-53CE34FE07A9}">
+	<AudioObjects>
+		<WorkUnit Name="UI" ID="{AEEC053D-330E-44D6-9458-D53CBB632358}" OwnerID="{02F01299-C935-4762-829F-53CE34FE07A9}" PersistMode="Nested">
+			<ChildrenList>
+				<Folder Name="Doomsday Clock" ID="{E7644EF1-28BC-44CB-A012-4932E75BC983}" ShortID="259117910"/>
+				<Folder Name="Score Bar" ID="{3AB07D43-B6E3-4FFC-A348-A6BAAD36246C}" ShortID="1028645274"/>
+				<Folder Name="Dagger" ID="{18B74029-0664-4F50-8EEE-BAE64ACE4957}" ShortID="1059059808"/>
+				<Folder Name="Lookout Level" ID="{575FE97C-4632-4553-8BF7-3B92A7CA5754}" ShortID="653243672"/>
+				<Folder Name="Menu" ID="{9ADACD1E-A116-4488-879B-58B8A74FA1F4}" ShortID="1011761372"/>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
