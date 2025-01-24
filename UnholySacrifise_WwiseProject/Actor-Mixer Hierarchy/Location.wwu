@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5796FE29-40F8-4439-A082-763AACA67460}" SchemaVersion="123" RootDocumentID="{02F01299-C935-4762-829F-53CE34FE07A9}" ParentDocumentID="{02F01299-C935-4762-829F-53CE34FE07A9}">
+	<AudioObjects>
+		<WorkUnit Name="Location" ID="{5796FE29-40F8-4439-A082-763AACA67460}" OwnerID="{02F01299-C935-4762-829F-53CE34FE07A9}" PersistMode="Nested">
+			<ChildrenList>
+				<Folder Name="Ambiance" ID="{30729B7C-A0FD-4F0E-940A-ECA6E542D761}" ShortID="466416188">
+					<ChildrenList>
+						<ActorMixer Name="AM_TEST_PH" ID="{FA507436-5507-4C12-B597-EF2775D0D440}" ShortID="1073666145">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{61973D90-826B-4CDC-9742-9EF3A6C7FFF3}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B4A3317-FAC4-4D1F-85EE-E4448B2B661D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Random_Test" ID="{687D42A8-3AD9-45EF-97F9-4985C4D38110}" ShortID="524779920">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{61973D90-826B-4CDC-9742-9EF3A6C7FFF3}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B4A3317-FAC4-4D1F-85EE-E4448B2B661D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Drone PH" ID="{9812AE9A-937C-4281-9E29-0AFAAEBE40DA}" ShortID="454993009">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{61973D90-826B-4CDC-9742-9EF3A6C7FFF3}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B4A3317-FAC4-4D1F-85EE-E4448B2B661D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Drone PH" ID="{15A20711-76B6-431C-B483-96EBF240032C}">
+													<Language>SFX</Language>
+													<AudioFile>Drone PH.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="173636986"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Drone PH" ID="{15A20711-76B6-431C-B483-96EBF240032C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Drone PH 2" ID="{082720E9-FB84-4104-B111-295AA2453D85}" ShortID="655931987">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{61973D90-826B-4CDC-9742-9EF3A6C7FFF3}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B4A3317-FAC4-4D1F-85EE-E4448B2B661D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Drone PH 2" ID="{519C5413-FBE9-44C7-AD1A-F9E958AA5DDF}">
+													<Language>SFX</Language>
+													<AudioFile>Drone PH 2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="309662540"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Drone PH 2" ID="{519C5413-FBE9-44C7-AD1A-F9E958AA5DDF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Drone PH 3" ID="{B493582F-2313-47B5-B061-E1A5FB77FC19}" ShortID="292855414">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{61973D90-826B-4CDC-9742-9EF3A6C7FFF3}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B4A3317-FAC4-4D1F-85EE-E4448B2B661D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Drone PH 3" ID="{46297482-20C8-40F2-BCDF-DA0C89195B96}">
+													<Language>SFX</Language>
+													<AudioFile>Drone PH 3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="664939833"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Drone PH 3" ID="{46297482-20C8-40F2-BCDF-DA0C89195B96}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Drone PH 4" ID="{880A11A5-7D3E-403F-9527-48C41AFF744F}" ShortID="487697535">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{61973D90-826B-4CDC-9742-9EF3A6C7FFF3}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B4A3317-FAC4-4D1F-85EE-E4448B2B661D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Drone PH 4" ID="{73901DE2-4097-4127-8D9E-8487CCB3B465}">
+													<Language>SFX</Language>
+													<AudioFile>Drone PH 4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="79503460"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Drone PH 4" ID="{73901DE2-4097-4127-8D9E-8487CCB3B465}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</ActorMixer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Music" ID="{8B6843C2-EDE5-4844-BD49-EADE6AA84673}" ShortID="344810379"/>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5A1647B3-CD7E-4915-B5B9-04F6E82B8118}" SchemaVersion="123" RootDocumentID="{02F01299-C935-4762-829F-53CE34FE07A9}" ParentDocumentID="{02F01299-C935-4762-829F-53CE34FE07A9}">
+	<AudioObjects>
+		<WorkUnit Name="Character" ID="{5A1647B3-CD7E-4915-B5B9-04F6E82B8118}" OwnerID="{02F01299-C935-4762-829F-53CE34FE07A9}" PersistMode="Nested">
+			<ChildrenList>
+				<Folder Name="Hero" ID="{39EEAA9C-8D42-491D-8147-081265A4A1D7}" ShortID="140798222">
+					<ChildrenList>
+						<Folder Name="Foley" ID="{A00A5932-7FCC-4A1B-8E4F-E5913416BE4A}" ShortID="363104055"/>
+						<Folder Name="Action" ID="{DB107F95-288E-4AE5-B48B-3E644813277F}" ShortID="495935856"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="NPC" ID="{645EF0A7-2F0D-4F64-818B-9AE5E440927B}" ShortID="745379027"/>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

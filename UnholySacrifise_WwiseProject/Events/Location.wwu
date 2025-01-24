@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A29B4D97-9DB9-4B2C-A679-9CBDA3DF4112}" SchemaVersion="123" RootDocumentID="{1E5653C5-792B-4279-960B-99FC3AE1431A}" ParentDocumentID="{1E5653C5-792B-4279-960B-99FC3AE1431A}">
+	<Events>
+		<WorkUnit Name="Location" ID="{A29B4D97-9DB9-4B2C-A679-9CBDA3DF4112}" OwnerID="{1E5653C5-792B-4279-960B-99FC3AE1431A}" PersistMode="Nested">
+			<ChildrenList>
+				<Folder Name="Ambiance" ID="{9D83BDB0-F3B1-4688-9CEF-8BE4CC752B3E}" ShortID="226031298">
+					<ChildrenList>
+						<Event Name="Play_Amb_Test" ID="{DFBD8E39-2252-4811-AB6F-2A7B05730964}">
+							<ChildrenList>
+								<Action Name="" ID="{2A5BAC1C-29BF-4616-8EC4-F0ED2734820F}" ShortID="765859250">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Random_Test" ID="{687D42A8-3AD9-45EF-97F9-4985C4D38110}" WorkUnitID="{5796FE29-40F8-4439-A082-763AACA67460}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
