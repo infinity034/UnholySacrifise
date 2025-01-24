@@ -4,6 +4,9 @@
 		<WorkUnit Name="Default Work Unit" ID="{093DD4FE-25F5-4C4C-AC7F-143423DF7C69}" PersistMode="Standalone">
 			<ChildrenList>
 				<WorkUnit Name="Location" ID="{8AB5C188-1FA6-40F9-8DBD-3C99741C867D}" PersistMode="Reference"/>
+				<WorkUnit Name="Character_SB" ID="{B36C7659-A317-4579-B9BE-C1419A15A809}" PersistMode="Reference"/>
+				<WorkUnit Name="Object" ID="{8FEBD519-7B51-40D2-AA7C-A496C216E81E}" PersistMode="Reference"/>
+				<WorkUnit Name="UI" ID="{E2E93075-199A-4205-828C-B39C4DF125E2}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

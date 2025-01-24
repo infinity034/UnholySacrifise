@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{17EC7B8F-E460-4DC5-8612-9091E54FC4E8}" SchemaVersion="123" RootDocumentID="{1E5653C5-792B-4279-960B-99FC3AE1431A}" ParentDocumentID="{1E5653C5-792B-4279-960B-99FC3AE1431A}">
+	<Events>
+		<WorkUnit Name="Character" ID="{17EC7B8F-E460-4DC5-8612-9091E54FC4E8}" OwnerID="{1E5653C5-792B-4279-960B-99FC3AE1431A}" PersistMode="Nested">
+			<ChildrenList>
+				<Folder Name="Hero" ID="{7ACD1216-02E1-48B7-8E77-1EA562C0F2DC}" ShortID="506549796">
+					<ChildrenList>
+						<Folder Name="Foley" ID="{7AC5CB77-4A46-4F10-B7FD-5E97679DAB38}" ShortID="308034467"/>
+						<Folder Name="VO" ID="{F8672097-A8C6-41DA-8566-77FFEA29555A}" ShortID="202277924"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="NPC" ID="{4C058F5A-14B5-4814-9943-359F7DB43E81}" ShortID="1042957386">
+					<ChildrenList>
+						<Folder Name="Chill Trader" ID="{4EB7B515-A485-494C-9B58-DB5903C71BDF}" ShortID="351331716"/>
+						<Folder Name="Guard" ID="{C5F0EBDB-3FDB-463C-B9B2-78E96CF10A4A}" ShortID="967435161"/>
+						<Folder Name="Merchant" ID="{72760F13-9DF0-4919-95D9-7019169E1B24}" ShortID="248962073"/>
+						<Folder Name="Priest" ID="{C78D0FC8-90F5-44F5-8B18-6799322147C2}" ShortID="110734578">
+							<ChildrenList>
+								<Folder Name="Devil" ID="{BA07793A-D7C0-43B6-B0E0-894EF6238A8E}" ShortID="531416464"/>
+								<Folder Name="God" ID="{9BDB2AB6-29D8-4182-B723-3067E78C61BC}" ShortID="260893965"/>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Prionner" ID="{6355BF52-7B38-4388-8A5C-896950D66DC9}" ShortID="1053868213">
+							<ChildrenList>
+								<Folder Name="Innoncent" ID="{A7BC63E2-3199-42EA-981F-C9FBFF6670D5}" ShortID="684347852"/>
+								<Folder Name="Thief" ID="{1F667DBB-4DCB-4532-9F3B-E5C59C3B5532}" ShortID="278705488"/>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Raiders" ID="{A6E3B569-09AF-492C-88A9-D8333CDF739C}" ShortID="799512953"/>
+						<Folder Name="Tavern Keeper" ID="{DE8C115A-D34C-41C3-9DF8-CBD983FE7013}" ShortID="116688310"/>
+						<Folder Name="Walla" ID="{F0AC5CAE-853C-4C37-AFE8-860F4CEE51C9}" ShortID="743551933"/>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

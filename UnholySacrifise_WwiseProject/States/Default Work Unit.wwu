@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{3456D88E-42B6-4D6C-9B80-C50EA4F70B87}" SchemaVersion="123">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{3456D88E-42B6-4D6C-9B80-C50EA4F70B87}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{3456D88E-42B6-4D6C-9B80-C50EA4F70B87}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Karma" ID="{BA65322D-F07E-44CB-A4CA-7B6F69523391}">
+					<ChildrenList>
+						<State Name="None" ID="{6D1255DC-93FA-4C0E-9AE3-9D4A30D5AC3A}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Time" ID="{86F6B67A-7FE6-4673-B743-E5419AB3A919}">
+					<ChildrenList>
+						<State Name="None" ID="{6BEE74D0-A52F-4446-A213-3715A1403811}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

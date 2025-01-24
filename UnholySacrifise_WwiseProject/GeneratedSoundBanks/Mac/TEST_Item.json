@@ -1,0 +1,51 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "2878463329",
+    "Type": "User",
+    "GUID": "{8B2F54CE-C862-4A34-95FF-9A4A26261B25}",
+    "Language": "SFX",
+    "Hash": "{C4E0BE6F-7A5B-F0E9-526C-997CCFD0A7A9}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Object\\Item\\TEST_Item",
+    "ShortName": "TEST_Item",
+    "Path": "TEST_Item.bnk",
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "7989128",
+       "Name": "PH",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Default Work Unit\\Character\\Hero\\Action\\Hide\\Barrel\\PH",
+       "GUID": "{637569B2-C423-4352-B73C-0AE29E524632}",
+       "LibName": "Wwise Tone Generator",
+       "LibId": "6684674"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "698828439",
+      "Name": "Play_Item",
+      "ObjectPath": "\\Events\\Default Work Unit\\Object\\Item\\Play_Item",
+      "GUID": "{1C8A3266-5688-4050-886D-E88E5456F225}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.3",
+      "DurationMax": "0.3",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "7989128"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{52737DF0-9F51-21CB-CE80-8D81F4A624DB}"
+ }
+}
