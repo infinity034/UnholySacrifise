@@ -30,6 +30,7 @@ public class FieldView : MonoBehaviour
     private void Start()
     {
         VigilanceZise();
+        rotationView.rotation = directionView.rotation;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -91,6 +92,7 @@ public class FieldView : MonoBehaviour
     {
         zone.localScale = new Vector3(size[vigilancelevel], size[vigilancelevel], size[vigilancelevel]);
         zoneView.localScale = new Vector3(size[vigilancelevel], size[vigilancelevel], size[vigilancelevel]);
+        Debug.Log(angleView);
         view.fillAmount = angleView / 360;
         view.transform.localRotation = Quaternion.Euler(0, 0, angleView / 2f);
     }

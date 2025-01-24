@@ -123,6 +123,22 @@ MonoBehaviour:
         guid: de148384e288e14481007187ec53bb05
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Object
   BankWwu:
+  - PhysicalPath: SoundBanks\Character_SB.wwu
+    PathAndIcons:
+    - ElementName: SoundBanks
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: fed43d09f5254c4cac7f143423df7c69
+    - ElementName: Character_SB
+      ObjectType: 12
+      guid: 59766cb317a37945b9bec1419a15a809
+    ParentPath: SoundBanks\Default Work Unit\Character_SB
+    guid: 59766cb317a37945b9bec1419a15a809
+    GuidInternal: 
+    m_lastTime: -8584638472401419475
+    List: []
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: SoundBanks
@@ -134,7 +150,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: fed43d09f5254c4cac7f143423df7c69
     GuidInternal: 
-    m_lastTime: -8584639243812435067
+    m_lastTime: -8584638472401419475
     List: []
   - PhysicalPath: SoundBanks\Location.wwu
     PathAndIcons:
@@ -150,7 +166,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit\Location
     guid: 88c1b58aa61ff9408dbd3c99741c867d
     GuidInternal: 
-    m_lastTime: -8584639243812424624
+    m_lastTime: -8584638472401409426
     List:
     - name: Ambiance
       guid: d90add2f4c13bf4caad4f138f35381e4
@@ -169,9 +185,26 @@ MonoBehaviour:
         ObjectType: 4
         guid: d90add2f4c13bf4caad4f138f35381e4
       Path: SoundBanks\Default Work Unit\Location\Ambiance
-    - name: TEST
+    - name: Music
+      guid: f07585c32eba9145aa4fdc58d6bb0d3b
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fed43d09f5254c4cac7f143423df7c69
+      - ElementName: Location
+        ObjectType: 12
+        guid: 88c1b58aa61ff9408dbd3c99741c867d
+      - ElementName: Music
+        ObjectType: 4
+        guid: f07585c32eba9145aa4fdc58d6bb0d3b
+      Path: SoundBanks\Default Work Unit\Location\Music
+    - name: TEST_AMB
       guid: 2eff21bce52c8547a9ea1ba2af1c6fd6
-      id: 3157003241
+      id: 3060491804
       PathAndIcons:
       - ElementName: SoundBanks
         ObjectType: 5
@@ -185,11 +218,852 @@ MonoBehaviour:
       - ElementName: Ambiance
         ObjectType: 4
         guid: d90add2f4c13bf4caad4f138f35381e4
-      - ElementName: TEST
+      - ElementName: TEST_AMB
         ObjectType: 7
         guid: 2eff21bce52c8547a9ea1ba2af1c6fd6
-      Path: SoundBanks\Default Work Unit\Location\Ambiance\TEST
+      Path: SoundBanks\Default Work Unit\Location\Ambiance\TEST_AMB
+    - name: TEST_Music
+      guid: 9a5bd43bd858f1499db81e7355ea34a1
+      id: 379521629
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fed43d09f5254c4cac7f143423df7c69
+      - ElementName: Location
+        ObjectType: 12
+        guid: 88c1b58aa61ff9408dbd3c99741c867d
+      - ElementName: Music
+        ObjectType: 4
+        guid: f07585c32eba9145aa4fdc58d6bb0d3b
+      - ElementName: TEST_Music
+        ObjectType: 7
+        guid: 9a5bd43bd858f1499db81e7355ea34a1
+      Path: SoundBanks\Default Work Unit\Location\Music\TEST_Music
+  - PhysicalPath: SoundBanks\Object.wwu
+    PathAndIcons:
+    - ElementName: SoundBanks
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: fed43d09f5254c4cac7f143423df7c69
+    - ElementName: Object
+      ObjectType: 12
+      guid: 19d5eb8f517bd240aa7ca496c216e81e
+    ParentPath: SoundBanks\Default Work Unit\Object
+    guid: 19d5eb8f517bd240aa7ca496c216e81e
+    GuidInternal: 
+    m_lastTime: -8584638472401409426
+    List:
+    - name: Altar
+      guid: 0f0758edc976264e93b70d2ce99be874
+      id: 338315243
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fed43d09f5254c4cac7f143423df7c69
+      - ElementName: Object
+        ObjectType: 12
+        guid: 19d5eb8f517bd240aa7ca496c216e81e
+      - ElementName: Event
+        ObjectType: 4
+        guid: df7ad34bff95054d80360c299218cdac
+      - ElementName: Altar
+        ObjectType: 4
+        guid: 0f0758edc976264e93b70d2ce99be874
+      Path: SoundBanks\Default Work Unit\Object\Event\Altar
+    - name: Bed
+      guid: f2d33bb3c06f3f4f99b44a01d5019e86
+      id: 446279778
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fed43d09f5254c4cac7f143423df7c69
+      - ElementName: Object
+        ObjectType: 12
+        guid: 19d5eb8f517bd240aa7ca496c216e81e
+      - ElementName: Event
+        ObjectType: 4
+        guid: df7ad34bff95054d80360c299218cdac
+      - ElementName: Bed
+        ObjectType: 4
+        guid: f2d33bb3c06f3f4f99b44a01d5019e86
+      Path: SoundBanks\Default Work Unit\Object\Event\Bed
+    - name: Bottle of Aclohol
+      guid: b27f3ee3546bf44eb2e593a63fdb4c06
+      id: 763109252
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fed43d09f5254c4cac7f143423df7c69
+      - ElementName: Object
+        ObjectType: 12
+        guid: 19d5eb8f517bd240aa7ca496c216e81e
+      - ElementName: Item
+        ObjectType: 4
+        guid: c2294578b1b28a4f9badf8d8cac8dbc3
+      - ElementName: Bottle of Aclohol
+        ObjectType: 4
+        guid: b27f3ee3546bf44eb2e593a63fdb4c06
+      Path: SoundBanks\Default Work Unit\Object\Item\Bottle of Aclohol
+    - name: Cart
+      guid: 225554efce9a3745a5a868637b2012b1
+      id: 4189504243
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fed43d09f5254c4cac7f143423df7c69
+      - ElementName: Object
+        ObjectType: 12
+        guid: 19d5eb8f517bd240aa7ca496c216e81e
+      - ElementName: Event
+        ObjectType: 4
+        guid: df7ad34bff95054d80360c299218cdac
+      - ElementName: Cart
+        ObjectType: 4
+        guid: 225554efce9a3745a5a868637b2012b1
+      Path: SoundBanks\Default Work Unit\Object\Event\Cart
+    - name: Contract
+      guid: a177dc0073215d438064d799856d182f
+      id: 2341313123
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fed43d09f5254c4cac7f143423df7c69
+      - ElementName: Object
+        ObjectType: 12
+        guid: 19d5eb8f517bd240aa7ca496c216e81e
+      - ElementName: Item
+        ObjectType: 4
+        guid: c2294578b1b28a4f9badf8d8cac8dbc3
+      - ElementName: Contract
+        ObjectType: 4
+        guid: a177dc0073215d438064d799856d182f
+      Path: SoundBanks\Default Work Unit\Object\Item\Contract
+    - name: Event
+      guid: df7ad34bff95054d80360c299218cdac
+      id: 3161415855
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fed43d09f5254c4cac7f143423df7c69
+      - ElementName: Object
+        ObjectType: 12
+        guid: 19d5eb8f517bd240aa7ca496c216e81e
+      - ElementName: Event
+        ObjectType: 4
+        guid: df7ad34bff95054d80360c299218cdac
+      Path: SoundBanks\Default Work Unit\Object\Event
+    - name: Fish
+      guid: 4c69ffb9174c0e4484bdb98e0ef4b524
+      id: 2695658327
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fed43d09f5254c4cac7f143423df7c69
+      - ElementName: Object
+        ObjectType: 12
+        guid: 19d5eb8f517bd240aa7ca496c216e81e
+      - ElementName: Item
+        ObjectType: 4
+        guid: c2294578b1b28a4f9badf8d8cac8dbc3
+      - ElementName: Fish
+        ObjectType: 4
+        guid: 4c69ffb9174c0e4484bdb98e0ef4b524
+      Path: SoundBanks\Default Work Unit\Object\Item\Fish
+    - name: Gold Pieces
+      guid: 5a06d1b3ee9aaf48819030a1dec6d57f
+      id: 3235665484
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fed43d09f5254c4cac7f143423df7c69
+      - ElementName: Object
+        ObjectType: 12
+        guid: 19d5eb8f517bd240aa7ca496c216e81e
+      - ElementName: Item
+        ObjectType: 4
+        guid: c2294578b1b28a4f9badf8d8cac8dbc3
+      - ElementName: Gold Pieces
+        ObjectType: 4
+        guid: 5a06d1b3ee9aaf48819030a1dec6d57f
+      Path: SoundBanks\Default Work Unit\Object\Item\Gold Pieces
+    - name: Ink
+      guid: af27cfb8a976e84fbe0cf213572bf2b3
+      id: 529034927
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fed43d09f5254c4cac7f143423df7c69
+      - ElementName: Object
+        ObjectType: 12
+        guid: 19d5eb8f517bd240aa7ca496c216e81e
+      - ElementName: Item
+        ObjectType: 4
+        guid: c2294578b1b28a4f9badf8d8cac8dbc3
+      - ElementName: Ink
+        ObjectType: 4
+        guid: af27cfb8a976e84fbe0cf213572bf2b3
+      Path: SoundBanks\Default Work Unit\Object\Item\Ink
+    - name: Item
+      guid: c2294578b1b28a4f9badf8d8cac8dbc3
+      id: 1222624712
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fed43d09f5254c4cac7f143423df7c69
+      - ElementName: Object
+        ObjectType: 12
+        guid: 19d5eb8f517bd240aa7ca496c216e81e
+      - ElementName: Item
+        ObjectType: 4
+        guid: c2294578b1b28a4f9badf8d8cac8dbc3
+      Path: SoundBanks\Default Work Unit\Object\Item
+    - name: Library
+      guid: 29849b78d6babc4285ec155a7f5fe107
+      id: 2823359158
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fed43d09f5254c4cac7f143423df7c69
+      - ElementName: Object
+        ObjectType: 12
+        guid: 19d5eb8f517bd240aa7ca496c216e81e
+      - ElementName: Event
+        ObjectType: 4
+        guid: df7ad34bff95054d80360c299218cdac
+      - ElementName: Library
+        ObjectType: 4
+        guid: 29849b78d6babc4285ec155a7f5fe107
+      Path: SoundBanks\Default Work Unit\Object\Event\Library
+    - name: Needle
+      guid: e3d4fe545e0bc64c855220b6ae9db5fa
+      id: 960359640
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fed43d09f5254c4cac7f143423df7c69
+      - ElementName: Object
+        ObjectType: 12
+        guid: 19d5eb8f517bd240aa7ca496c216e81e
+      - ElementName: Item
+        ObjectType: 4
+        guid: c2294578b1b28a4f9badf8d8cac8dbc3
+      - ElementName: Needle
+        ObjectType: 4
+        guid: e3d4fe545e0bc64c855220b6ae9db5fa
+      Path: SoundBanks\Default Work Unit\Object\Item\Needle
+    - name: PIzza
+      guid: 2fa0fd2283904c42820e2132bd73de60
+      id: 1488423865
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fed43d09f5254c4cac7f143423df7c69
+      - ElementName: Object
+        ObjectType: 12
+        guid: 19d5eb8f517bd240aa7ca496c216e81e
+      - ElementName: Item
+        ObjectType: 4
+        guid: c2294578b1b28a4f9badf8d8cac8dbc3
+      - ElementName: PIzza
+        ObjectType: 4
+        guid: 2fa0fd2283904c42820e2132bd73de60
+      Path: SoundBanks\Default Work Unit\Object\Item\PIzza
+    - name: Salt
+      guid: 1261d911d11c0e4aa50308943c964b3c
+      id: 837392925
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fed43d09f5254c4cac7f143423df7c69
+      - ElementName: Object
+        ObjectType: 12
+        guid: 19d5eb8f517bd240aa7ca496c216e81e
+      - ElementName: Item
+        ObjectType: 4
+        guid: c2294578b1b28a4f9badf8d8cac8dbc3
+      - ElementName: Salt
+        ObjectType: 4
+        guid: 1261d911d11c0e4aa50308943c964b3c
+      Path: SoundBanks\Default Work Unit\Object\Item\Salt
+    - name: TEST_Item
+      guid: ce542f8b62c8344a95ff9a4a26261b25
+      id: 2878463329
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fed43d09f5254c4cac7f143423df7c69
+      - ElementName: Object
+        ObjectType: 12
+        guid: 19d5eb8f517bd240aa7ca496c216e81e
+      - ElementName: Item
+        ObjectType: 4
+        guid: c2294578b1b28a4f9badf8d8cac8dbc3
+      - ElementName: TEST_Item
+        ObjectType: 7
+        guid: ce542f8b62c8344a95ff9a4a26261b25
+      Path: SoundBanks\Default Work Unit\Object\Item\TEST_Item
+  - PhysicalPath: SoundBanks\UI.wwu
+    PathAndIcons:
+    - ElementName: SoundBanks
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: fed43d09f5254c4cac7f143423df7c69
+    - ElementName: UI
+      ObjectType: 12
+      guid: 7530e9e29a190542828cb39c4df125e2
+    ParentPath: SoundBanks\Default Work Unit\UI
+    guid: 7530e9e29a190542828cb39c4df125e2
+    GuidInternal: 
+    m_lastTime: -8584638472401409426
+    List:
+    - name: Dagger
+      guid: 5c5314c976e63a4197f872f55b8623c4
+      id: 3732162827
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fed43d09f5254c4cac7f143423df7c69
+      - ElementName: UI
+        ObjectType: 12
+        guid: 7530e9e29a190542828cb39c4df125e2
+      - ElementName: Dagger
+        ObjectType: 4
+        guid: 5c5314c976e63a4197f872f55b8623c4
+      Path: SoundBanks\Default Work Unit\UI\Dagger
+    - name: Doomsday Clock
+      guid: 5aabf168bd82ad4c9a9cc39ac87587fd
+      id: 1810739467
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fed43d09f5254c4cac7f143423df7c69
+      - ElementName: UI
+        ObjectType: 12
+        guid: 7530e9e29a190542828cb39c4df125e2
+      - ElementName: Doomsday Clock
+        ObjectType: 4
+        guid: 5aabf168bd82ad4c9a9cc39ac87587fd
+      Path: SoundBanks\Default Work Unit\UI\Doomsday Clock
+    - name: Lookout Level
+      guid: f51acd607980084dae35a0eaf535154e
+      id: 3675581818
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fed43d09f5254c4cac7f143423df7c69
+      - ElementName: UI
+        ObjectType: 12
+        guid: 7530e9e29a190542828cb39c4df125e2
+      - ElementName: Lookout Level
+        ObjectType: 4
+        guid: f51acd607980084dae35a0eaf535154e
+      Path: SoundBanks\Default Work Unit\UI\Lookout Level
+    - name: Menu
+      guid: a221a3945907ba45a395176edaee47c4
+      id: 2607556080
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fed43d09f5254c4cac7f143423df7c69
+      - ElementName: UI
+        ObjectType: 12
+        guid: 7530e9e29a190542828cb39c4df125e2
+      - ElementName: Menu
+        ObjectType: 4
+        guid: a221a3945907ba45a395176edaee47c4
+      Path: SoundBanks\Default Work Unit\UI\Menu
+    - name: Score
+      guid: 9e0fddb0f272d940841c7d6418fccae0
+      id: 2398231425
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fed43d09f5254c4cac7f143423df7c69
+      - ElementName: UI
+        ObjectType: 12
+        guid: 7530e9e29a190542828cb39c4df125e2
+      - ElementName: Score
+        ObjectType: 4
+        guid: 9e0fddb0f272d940841c7d6418fccae0
+      Path: SoundBanks\Default Work Unit\UI\Score
+    - name: Score
+      guid: 129f93f28408ff4f81d5ecea5400529d
+      id: 2398231425
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fed43d09f5254c4cac7f143423df7c69
+      - ElementName: UI
+        ObjectType: 12
+        guid: 7530e9e29a190542828cb39c4df125e2
+      - ElementName: Score
+        ObjectType: 4
+        guid: 9e0fddb0f272d940841c7d6418fccae0
+      - ElementName: Score
+        ObjectType: 7
+        guid: 129f93f28408ff4f81d5ecea5400529d
+      Path: SoundBanks\Default Work Unit\UI\Score\Score
   EventWwu:
+  - PhysicalPath: Events\Character.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: c553561e2b797942960b99fc3ae1431a
+    - ElementName: Character
+      ObjectType: 12
+      guid: 8f7bec1760e4c54d86129091e54fc4e8
+    ParentPath: Events\Default Work Unit\Character
+    guid: 8f7bec1760e4c54d86129091e54fc4e8
+    GuidInternal: 
+    m_lastTime: -8584638472406312087
+    List:
+    - name: Chill Trader
+      guid: 15b5b74e85a44c499b58db5903c71bdf
+      id: 3590652395
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Character
+        ObjectType: 12
+        guid: 8f7bec1760e4c54d86129091e54fc4e8
+      - ElementName: NPC
+        ObjectType: 4
+        guid: 5a8f054cb51414489943359f7db43e81
+      - ElementName: Chill Trader
+        ObjectType: 4
+        guid: 15b5b74e85a44c499b58db5903c71bdf
+      Path: Events\Default Work Unit\Character\NPC\Chill Trader
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Devil
+      guid: 3a7907bac0d7b643b0e0894ef6238a8e
+      id: 697508553
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Character
+        ObjectType: 12
+        guid: 8f7bec1760e4c54d86129091e54fc4e8
+      - ElementName: NPC
+        ObjectType: 4
+        guid: 5a8f054cb51414489943359f7db43e81
+      - ElementName: Priest
+        ObjectType: 4
+        guid: c80f8dc7f590f5448b186799322147c2
+      - ElementName: Devil
+        ObjectType: 4
+        guid: 3a7907bac0d7b643b0e0894ef6238a8e
+      Path: Events\Default Work Unit\Character\NPC\Priest\Devil
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Foley
+      guid: 77cbc57a464a104fb7fd5e97679dab38
+      id: 247557814
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Character
+        ObjectType: 12
+        guid: 8f7bec1760e4c54d86129091e54fc4e8
+      - ElementName: Hero
+        ObjectType: 4
+        guid: 1612cd7ae102b7488e771ea562c0f2dc
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 77cbc57a464a104fb7fd5e97679dab38
+      Path: Events\Default Work Unit\Character\Hero\Foley
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: God
+      guid: b62adb9bd8298241b7233067e78c61bc
+      id: 546106849
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Character
+        ObjectType: 12
+        guid: 8f7bec1760e4c54d86129091e54fc4e8
+      - ElementName: NPC
+        ObjectType: 4
+        guid: 5a8f054cb51414489943359f7db43e81
+      - ElementName: Priest
+        ObjectType: 4
+        guid: c80f8dc7f590f5448b186799322147c2
+      - ElementName: God
+        ObjectType: 4
+        guid: b62adb9bd8298241b7233067e78c61bc
+      Path: Events\Default Work Unit\Character\NPC\Priest\God
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Guard
+      guid: dbebf0c5db3f3c46b9b278e96cf10a4a
+      id: 740892324
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Character
+        ObjectType: 12
+        guid: 8f7bec1760e4c54d86129091e54fc4e8
+      - ElementName: NPC
+        ObjectType: 4
+        guid: 5a8f054cb51414489943359f7db43e81
+      - ElementName: Guard
+        ObjectType: 4
+        guid: dbebf0c5db3f3c46b9b278e96cf10a4a
+      Path: Events\Default Work Unit\Character\NPC\Guard
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Hero
+      guid: 1612cd7ae102b7488e771ea562c0f2dc
+      id: 3196610217
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Character
+        ObjectType: 12
+        guid: 8f7bec1760e4c54d86129091e54fc4e8
+      - ElementName: Hero
+        ObjectType: 4
+        guid: 1612cd7ae102b7488e771ea562c0f2dc
+      Path: Events\Default Work Unit\Character\Hero
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Innoncent
+      guid: e263bca79931ea42981fc9fbff6670d5
+      id: 840815899
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Character
+        ObjectType: 12
+        guid: 8f7bec1760e4c54d86129091e54fc4e8
+      - ElementName: NPC
+        ObjectType: 4
+        guid: 5a8f054cb51414489943359f7db43e81
+      - ElementName: Prionner
+        ObjectType: 4
+        guid: 52bf5563387b88438a5c896950d66dc9
+      - ElementName: Innoncent
+        ObjectType: 4
+        guid: e263bca79931ea42981fc9fbff6670d5
+      Path: Events\Default Work Unit\Character\NPC\Prionner\Innoncent
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Merchant
+      guid: 130f7672f09d194995d97019169e1b24
+      id: 3314508121
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Character
+        ObjectType: 12
+        guid: 8f7bec1760e4c54d86129091e54fc4e8
+      - ElementName: NPC
+        ObjectType: 4
+        guid: 5a8f054cb51414489943359f7db43e81
+      - ElementName: Merchant
+        ObjectType: 4
+        guid: 130f7672f09d194995d97019169e1b24
+      Path: Events\Default Work Unit\Character\NPC\Merchant
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: NPC
+      guid: 5a8f054cb51414489943359f7db43e81
+      id: 662417162
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Character
+        ObjectType: 12
+        guid: 8f7bec1760e4c54d86129091e54fc4e8
+      - ElementName: NPC
+        ObjectType: 4
+        guid: 5a8f054cb51414489943359f7db43e81
+      Path: Events\Default Work Unit\Character\NPC
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Priest
+      guid: c80f8dc7f590f5448b186799322147c2
+      id: 4270916780
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Character
+        ObjectType: 12
+        guid: 8f7bec1760e4c54d86129091e54fc4e8
+      - ElementName: NPC
+        ObjectType: 4
+        guid: 5a8f054cb51414489943359f7db43e81
+      - ElementName: Priest
+        ObjectType: 4
+        guid: c80f8dc7f590f5448b186799322147c2
+      Path: Events\Default Work Unit\Character\NPC\Priest
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Prionner
+      guid: 52bf5563387b88438a5c896950d66dc9
+      id: 3090567342
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Character
+        ObjectType: 12
+        guid: 8f7bec1760e4c54d86129091e54fc4e8
+      - ElementName: NPC
+        ObjectType: 4
+        guid: 5a8f054cb51414489943359f7db43e81
+      - ElementName: Prionner
+        ObjectType: 4
+        guid: 52bf5563387b88438a5c896950d66dc9
+      Path: Events\Default Work Unit\Character\NPC\Prionner
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Raiders
+      guid: 69b5e3a6af092c4988a9d8333cdf739c
+      id: 3565945207
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Character
+        ObjectType: 12
+        guid: 8f7bec1760e4c54d86129091e54fc4e8
+      - ElementName: NPC
+        ObjectType: 4
+        guid: 5a8f054cb51414489943359f7db43e81
+      - ElementName: Raiders
+        ObjectType: 4
+        guid: 69b5e3a6af092c4988a9d8333cdf739c
+      Path: Events\Default Work Unit\Character\NPC\Raiders
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Tavern Keeper
+      guid: 5a118cde4cd3c3419df8cbd983fe7013
+      id: 1143383287
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Character
+        ObjectType: 12
+        guid: 8f7bec1760e4c54d86129091e54fc4e8
+      - ElementName: NPC
+        ObjectType: 4
+        guid: 5a8f054cb51414489943359f7db43e81
+      - ElementName: Tavern Keeper
+        ObjectType: 4
+        guid: 5a118cde4cd3c3419df8cbd983fe7013
+      Path: Events\Default Work Unit\Character\NPC\Tavern Keeper
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Thief
+      guid: bb7d661fcb4d32459f3be5c59c3b5532
+      id: 1182825039
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Character
+        ObjectType: 12
+        guid: 8f7bec1760e4c54d86129091e54fc4e8
+      - ElementName: NPC
+        ObjectType: 4
+        guid: 5a8f054cb51414489943359f7db43e81
+      - ElementName: Prionner
+        ObjectType: 4
+        guid: 52bf5563387b88438a5c896950d66dc9
+      - ElementName: Thief
+        ObjectType: 4
+        guid: bb7d661fcb4d32459f3be5c59c3b5532
+      Path: Events\Default Work Unit\Character\NPC\Prionner\Thief
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: VO
+      guid: 972067f8c6a8da41856677ffea29555a
+      id: 1534528548
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Character
+        ObjectType: 12
+        guid: 8f7bec1760e4c54d86129091e54fc4e8
+      - ElementName: Hero
+        ObjectType: 4
+        guid: 1612cd7ae102b7488e771ea562c0f2dc
+      - ElementName: VO
+        ObjectType: 4
+        guid: 972067f8c6a8da41856677ffea29555a
+      Path: Events\Default Work Unit\Character\Hero\VO
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Walla
+      guid: ae5cacf03c85374cafe8860f4cee51c9
+      id: 2538584666
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Character
+        ObjectType: 12
+        guid: 8f7bec1760e4c54d86129091e54fc4e8
+      - ElementName: NPC
+        ObjectType: 4
+        guid: 5a8f054cb51414489943359f7db43e81
+      - ElementName: Walla
+        ObjectType: 4
+        guid: ae5cacf03c85374cafe8860f4cee51c9
+      Path: Events\Default Work Unit\Character\NPC\Walla
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Events
@@ -201,7 +1075,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c553561e2b797942960b99fc3ae1431a
     GuidInternal: 
-    m_lastTime: -8584639243820022919
+    m_lastTime: -8584638472406301875
     List: []
   - PhysicalPath: Events\Location.wwu
     PathAndIcons:
@@ -217,7 +1091,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit\Location
     guid: 974d9ba2b99d2c4ba6799cbda3df4112
     GuidInternal: 
-    m_lastTime: -8584639243820022919
+    m_lastTime: -8584638472406301875
     List:
     - name: Ambiance
       guid: b0bd839db1f388469cef8be4cc752b3e
@@ -239,9 +1113,29 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Play_Amb_Test
+    - name: Music
+      guid: 8ea7b45047edd844aab54082ea1ac7b6
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Location
+        ObjectType: 12
+        guid: 974d9ba2b99d2c4ba6799cbda3df4112
+      - ElementName: Music
+        ObjectType: 4
+        guid: 8ea7b45047edd844aab54082ea1ac7b6
+      Path: Events\Default Work Unit\Location\Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Amb
       guid: 398ebddf52221148ab6f2a7b05730964
-      id: 2976252989
+      id: 2959533290
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -255,13 +1149,530 @@ MonoBehaviour:
       - ElementName: Ambiance
         ObjectType: 4
         guid: b0bd839db1f388469cef8be4cc752b3e
-      - ElementName: Play_Amb_Test
+      - ElementName: Play_Amb
         ObjectType: 3
         guid: 398ebddf52221148ab6f2a7b05730964
-      Path: Events\Default Work Unit\Location\Ambiance\Play_Amb_Test
+      Path: Events\Default Work Unit\Location\Ambiance\Play_Amb
       maxAttenuation: 0
       maxDuration: 35.90839
       minDuration: 35.90839
+    - name: Play_Music
+      guid: 3f9a9cc6bd8f0142ae238d2884ec5743
+      id: 2932040671
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Location
+        ObjectType: 12
+        guid: 974d9ba2b99d2c4ba6799cbda3df4112
+      - ElementName: Music
+        ObjectType: 4
+        guid: 8ea7b45047edd844aab54082ea1ac7b6
+      - ElementName: Play_Music
+        ObjectType: 3
+        guid: 3f9a9cc6bd8f0142ae238d2884ec5743
+      Path: Events\Default Work Unit\Location\Music\Play_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  - PhysicalPath: Events\Object.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: c553561e2b797942960b99fc3ae1431a
+    - ElementName: Object
+      ObjectType: 12
+      guid: c362c4e632666c4c92390beb3b13f9ce
+    ParentPath: Events\Default Work Unit\Object
+    guid: c362c4e632666c4c92390beb3b13f9ce
+    GuidInternal: 
+    m_lastTime: -8584638472406301875
+    List:
+    - name: Altar
+      guid: 0a2ed748e4d4e646b5e7b475505a9db5
+      id: 338315243
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Object
+        ObjectType: 12
+        guid: c362c4e632666c4c92390beb3b13f9ce
+      - ElementName: Event
+        ObjectType: 4
+        guid: f1ddf6a78285074c846673b5ce5e4734
+      - ElementName: Altar
+        ObjectType: 4
+        guid: 0a2ed748e4d4e646b5e7b475505a9db5
+      Path: Events\Default Work Unit\Object\Event\Altar
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Bed
+      guid: 7bc09e33e5f6514a91c99ac7ce71a7f1
+      id: 446279778
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Object
+        ObjectType: 12
+        guid: c362c4e632666c4c92390beb3b13f9ce
+      - ElementName: Event
+        ObjectType: 4
+        guid: f1ddf6a78285074c846673b5ce5e4734
+      - ElementName: Bed
+        ObjectType: 4
+        guid: 7bc09e33e5f6514a91c99ac7ce71a7f1
+      Path: Events\Default Work Unit\Object\Event\Bed
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Bottle Of Alcohol
+      guid: 6fa5cdcf2056ad4b99f7e00d5dab1c75
+      id: 1819194070
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Object
+        ObjectType: 12
+        guid: c362c4e632666c4c92390beb3b13f9ce
+      - ElementName: Item
+        ObjectType: 4
+        guid: c493ac151e161347baed0bebf9f1588f
+      - ElementName: Bottle Of Alcohol
+        ObjectType: 4
+        guid: 6fa5cdcf2056ad4b99f7e00d5dab1c75
+      Path: Events\Default Work Unit\Object\Item\Bottle Of Alcohol
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Cart
+      guid: 2c13a504700160478155b1dac60b325d
+      id: 4189504243
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Object
+        ObjectType: 12
+        guid: c362c4e632666c4c92390beb3b13f9ce
+      - ElementName: Event
+        ObjectType: 4
+        guid: f1ddf6a78285074c846673b5ce5e4734
+      - ElementName: Cart
+        ObjectType: 4
+        guid: 2c13a504700160478155b1dac60b325d
+      Path: Events\Default Work Unit\Object\Event\Cart
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Contract
+      guid: 9a3b24775208684abceefc4a7f69c414
+      id: 2341313123
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Object
+        ObjectType: 12
+        guid: c362c4e632666c4c92390beb3b13f9ce
+      - ElementName: Item
+        ObjectType: 4
+        guid: c493ac151e161347baed0bebf9f1588f
+      - ElementName: Contract
+        ObjectType: 4
+        guid: 9a3b24775208684abceefc4a7f69c414
+      Path: Events\Default Work Unit\Object\Item\Contract
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Event
+      guid: f1ddf6a78285074c846673b5ce5e4734
+      id: 3161415855
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Object
+        ObjectType: 12
+        guid: c362c4e632666c4c92390beb3b13f9ce
+      - ElementName: Event
+        ObjectType: 4
+        guid: f1ddf6a78285074c846673b5ce5e4734
+      Path: Events\Default Work Unit\Object\Event
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Fish
+      guid: f37ce1d58316c2459e9d2578d701dab6
+      id: 2695658327
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Object
+        ObjectType: 12
+        guid: c362c4e632666c4c92390beb3b13f9ce
+      - ElementName: Item
+        ObjectType: 4
+        guid: c493ac151e161347baed0bebf9f1588f
+      - ElementName: Fish
+        ObjectType: 4
+        guid: f37ce1d58316c2459e9d2578d701dab6
+      Path: Events\Default Work Unit\Object\Item\Fish
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Gold Pieces
+      guid: e021658fbc005842b430019ac34e8d3c
+      id: 3235665484
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Object
+        ObjectType: 12
+        guid: c362c4e632666c4c92390beb3b13f9ce
+      - ElementName: Item
+        ObjectType: 4
+        guid: c493ac151e161347baed0bebf9f1588f
+      - ElementName: Gold Pieces
+        ObjectType: 4
+        guid: e021658fbc005842b430019ac34e8d3c
+      Path: Events\Default Work Unit\Object\Item\Gold Pieces
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Incense
+      guid: 5ded7bb0efd9de4cb2f295ed762e0db3
+      id: 2466945278
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Object
+        ObjectType: 12
+        guid: c362c4e632666c4c92390beb3b13f9ce
+      - ElementName: Item
+        ObjectType: 4
+        guid: c493ac151e161347baed0bebf9f1588f
+      - ElementName: Incense
+        ObjectType: 4
+        guid: 5ded7bb0efd9de4cb2f295ed762e0db3
+      Path: Events\Default Work Unit\Object\Item\Incense
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Ink
+      guid: a8fc5e2a49eda946b3383aa7b5eec557
+      id: 529034927
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Object
+        ObjectType: 12
+        guid: c362c4e632666c4c92390beb3b13f9ce
+      - ElementName: Item
+        ObjectType: 4
+        guid: c493ac151e161347baed0bebf9f1588f
+      - ElementName: Ink
+        ObjectType: 4
+        guid: a8fc5e2a49eda946b3383aa7b5eec557
+      Path: Events\Default Work Unit\Object\Item\Ink
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Item
+      guid: c493ac151e161347baed0bebf9f1588f
+      id: 1222624712
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Object
+        ObjectType: 12
+        guid: c362c4e632666c4c92390beb3b13f9ce
+      - ElementName: Item
+        ObjectType: 4
+        guid: c493ac151e161347baed0bebf9f1588f
+      Path: Events\Default Work Unit\Object\Item
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Library
+      guid: e4fbac93d5115a498d6c6ad9857ae932
+      id: 2823359158
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Object
+        ObjectType: 12
+        guid: c362c4e632666c4c92390beb3b13f9ce
+      - ElementName: Event
+        ObjectType: 4
+        guid: f1ddf6a78285074c846673b5ce5e4734
+      - ElementName: Library
+        ObjectType: 4
+        guid: e4fbac93d5115a498d6c6ad9857ae932
+      Path: Events\Default Work Unit\Object\Event\Library
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Needle
+      guid: d9bddc175b57ab4e812c2dcf02db8e7d
+      id: 960359640
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Object
+        ObjectType: 12
+        guid: c362c4e632666c4c92390beb3b13f9ce
+      - ElementName: Item
+        ObjectType: 4
+        guid: c493ac151e161347baed0bebf9f1588f
+      - ElementName: Needle
+        ObjectType: 4
+        guid: d9bddc175b57ab4e812c2dcf02db8e7d
+      Path: Events\Default Work Unit\Object\Item\Needle
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Pizza
+      guid: f3c8be4c3bcbe24eb6613e39607829b5
+      id: 1488423865
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Object
+        ObjectType: 12
+        guid: c362c4e632666c4c92390beb3b13f9ce
+      - ElementName: Item
+        ObjectType: 4
+        guid: c493ac151e161347baed0bebf9f1588f
+      - ElementName: Pizza
+        ObjectType: 4
+        guid: f3c8be4c3bcbe24eb6613e39607829b5
+      Path: Events\Default Work Unit\Object\Item\Pizza
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Item
+      guid: 66328a1c88565040886de88e5456f225
+      id: 698828439
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Object
+        ObjectType: 12
+        guid: c362c4e632666c4c92390beb3b13f9ce
+      - ElementName: Item
+        ObjectType: 4
+        guid: c493ac151e161347baed0bebf9f1588f
+      - ElementName: Play_Item
+        ObjectType: 3
+        guid: 66328a1c88565040886de88e5456f225
+      Path: Events\Default Work Unit\Object\Item\Play_Item
+      maxAttenuation: 0
+      maxDuration: 0.3
+      minDuration: 0.3
+    - name: Salt
+      guid: da01d6d780947548b31f9dcdc3613815
+      id: 837392925
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: Object
+        ObjectType: 12
+        guid: c362c4e632666c4c92390beb3b13f9ce
+      - ElementName: Item
+        ObjectType: 4
+        guid: c493ac151e161347baed0bebf9f1588f
+      - ElementName: Salt
+        ObjectType: 4
+        guid: da01d6d780947548b31f9dcdc3613815
+      Path: Events\Default Work Unit\Object\Item\Salt
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  - PhysicalPath: Events\UI.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: c553561e2b797942960b99fc3ae1431a
+    - ElementName: UI
+      ObjectType: 12
+      guid: a8dd7bed0478f14faae0ae381852bed0
+    ParentPath: Events\Default Work Unit\UI
+    guid: a8dd7bed0478f14faae0ae381852bed0
+    GuidInternal: 
+    m_lastTime: -8584638472406291095
+    List:
+    - name: Dagger
+      guid: 35e2445a7a096241aaed6a221f6dacbc
+      id: 3732162827
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: UI
+        ObjectType: 12
+        guid: a8dd7bed0478f14faae0ae381852bed0
+      - ElementName: Dagger
+        ObjectType: 4
+        guid: 35e2445a7a096241aaed6a221f6dacbc
+      Path: Events\Default Work Unit\UI\Dagger
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Doomsday Clock
+      guid: 9b3d6f2dba3cef4fa3638396728b4f28
+      id: 1810739467
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: UI
+        ObjectType: 12
+        guid: a8dd7bed0478f14faae0ae381852bed0
+      - ElementName: Doomsday Clock
+        ObjectType: 4
+        guid: 9b3d6f2dba3cef4fa3638396728b4f28
+      Path: Events\Default Work Unit\UI\Doomsday Clock
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lookout Level
+      guid: 05eec6a1aa2ad749a64aa669a7a558d3
+      id: 3675581818
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: UI
+        ObjectType: 12
+        guid: a8dd7bed0478f14faae0ae381852bed0
+      - ElementName: Lookout Level
+        ObjectType: 4
+        guid: 05eec6a1aa2ad749a64aa669a7a558d3
+      Path: Events\Default Work Unit\UI\Lookout Level
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Menu
+      guid: ee930a1f2f26a9479fb30572eb57e532
+      id: 2607556080
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: UI
+        ObjectType: 12
+        guid: a8dd7bed0478f14faae0ae381852bed0
+      - ElementName: Menu
+        ObjectType: 4
+        guid: ee930a1f2f26a9479fb30572eb57e532
+      Path: Events\Default Work Unit\UI\Menu
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Score Bar
+      guid: 0ef0df3b8eae1e4bbd15a9d9ff486ac0
+      id: 2760954882
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c553561e2b797942960b99fc3ae1431a
+      - ElementName: UI
+        ObjectType: 12
+        guid: a8dd7bed0478f14faae0ae381852bed0
+      - ElementName: Score Bar
+        ObjectType: 4
+        guid: 0ef0df3b8eae1e4bbd15a9d9ff486ac0
+      Path: Events\Default Work Unit\UI\Score Bar
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -288,8 +1699,76 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 8ed85634b6426c4d9b80c50ea4f70b87
     GuidInternal: 
-    m_lastTime: -8584639243812414115
-    List: []
+    m_lastTime: -8584638472401399219
+    List:
+    - name: Karma
+      guid: 2d3265ba7ef0cb44a4ca7b6f69523391
+      id: 1828612423
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8ed85634b6426c4d9b80c50ea4f70b87
+      - ElementName: Karma
+        ObjectType: 9
+        guid: 2d3265ba7ef0cb44a4ca7b6f69523391
+      Path: States\Default Work Unit\Karma
+      values:
+      - name: None
+        guid: dc55126dfa930e4c9ae39d4a30d5ac3a
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8ed85634b6426c4d9b80c50ea4f70b87
+        - ElementName: Karma
+          ObjectType: 9
+          guid: 2d3265ba7ef0cb44a4ca7b6f69523391
+        - ElementName: None
+          ObjectType: 8
+          guid: dc55126dfa930e4c9ae39d4a30d5ac3a
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Time
+      guid: 7ab6f686e67f7346b743e5419ab3a919
+      id: 2654366170
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8ed85634b6426c4d9b80c50ea4f70b87
+      - ElementName: Time
+        ObjectType: 9
+        guid: 7ab6f686e67f7346b743e5419ab3a919
+      Path: States\Default Work Unit\Time
+      values:
+      - name: None
+        guid: d074ee6b2fa54644a2133715a1403811
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 8ed85634b6426c4d9b80c50ea4f70b87
+        - ElementName: Time
+          ObjectType: 9
+          guid: 7ab6f686e67f7346b743e5419ab3a919
+        - ElementName: None
+          ObjectType: 8
+          guid: d074ee6b2fa54644a2133715a1403811
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -302,7 +1781,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 9952fe3641688047a2b9ded91b1880fc
     GuidInternal: 
-    m_lastTime: -8584639243812414115
+    m_lastTime: -8584638472401388936
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu

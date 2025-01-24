@@ -14,7 +14,7 @@ public class NPC : MonoBehaviour
 
     protected virtual void Awake()
     {
-        fieldView = GetComponentInChildren<FieldView>();
+        
     }
 
     protected void RotateToTarget(Transform target)
