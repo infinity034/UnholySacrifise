@@ -1,14 +1,16 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FieldView : MonoBehaviour
 {
-    private CapsuleCollider2D collider2D;
+    [SerializeField]
+    private Image view;
     [SerializeField]
     private float angleView = 90f;
     [SerializeField]
-    private Transform directionView;
+    private Transform directionView, rotationView, zone, zoneView;
     [SerializeField]
-    private float range = 4;
+    private float range = 10;
     [SerializeField]
     private int vigilancelevel = 1;
 
@@ -16,19 +18,18 @@ public class FieldView : MonoBehaviour
     private Transform target;
 
     [SerializeField]
-    private float[] offsetMin, offsetMax, sizeMin, sizeMax;
+    private float[] size;
 
     public Transform DirectionView { get {  return directionView; } }
 
     private void Awake()
     {
-        collider2D = GetComponent<CapsuleCollider2D>();
         target = FindObjectOfType<PlayerController>().transform;
     }
 
     private void Start()
     {
-        Rotation(true,true);
+        VigilanceZise();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -43,7 +44,8 @@ public class FieldView : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Vector2 dir = target.position - transform.position;
+            VigilanceZise();
+            Vector2 dir = target.position - directionView.position;
             float angle = Vector3.Angle(dir, directionView.up);
             RaycastHit2D r = Physics2D.Raycast(directionView.position, dir, range);
 
@@ -53,6 +55,7 @@ public class FieldView : MonoBehaviour
                 {
                     Debug.Log("Seen!");
                     Debug.DrawRay(directionView.position, dir, Color.red);
+                    RotateToTarget(target);
                 }
                 else
                 {
@@ -70,50 +73,25 @@ public class FieldView : MonoBehaviour
         }
     }
 
-    private float CurrentValueByAngle(float min, float max, float currentAngle)
+    public void RotationView(Quaternion targetRotation)
     {
-        float diff = max - min;
-
-        float percentBetween = 0;
-        if (currentAngle > 0f && currentAngle <= 90f) 
-        {
-            percentBetween = diff / 90f;
-            return min + (percentBetween * currentAngle);
-        }
-        else if(currentAngle > 90f && currentAngle <= 180)
-        {
-            percentBetween = diff / 90f;
-            return min + (diff - ((percentBetween * currentAngle) - diff));
-        }
-        else if (currentAngle > 180f && currentAngle <= 270f)
-        {
-            percentBetween = diff / 90f;
-            return min + (percentBetween * (currentAngle - 180f));
-        }
-        else if (currentAngle > 270f && currentAngle <= 360)
-        {
-            percentBetween = diff / 90f;
-            return min + (diff - ((percentBetween * (currentAngle - 180f)) - diff));
-        }
-        return 0;
+        directionView.rotation = Quaternion.RotateTowards(directionView.rotation, targetRotation, 1000 * Time.deltaTime);
+        rotationView.rotation = Quaternion.RotateTowards(rotationView.rotation, targetRotation, 1000 * Time.deltaTime);
     }
 
-    public void Rotation(bool right, bool start = false)
+    private void RotateToTarget(Transform target)
     {
-        Vector3 rotation = directionView.localEulerAngles;
-        if(!start)
-        {
-            if (right)
-            {
-                rotation.z -= Time.deltaTime * 25;
-            }
-            else
-            {
-                rotation.z += Time.deltaTime * 25;
-            }
-        }
-        directionView.localEulerAngles = rotation;
-        collider2D.offset = new Vector2(0, CurrentValueByAngle(offsetMin[vigilancelevel], offsetMax[vigilancelevel], rotation.z));
-        collider2D.size = new Vector2(1, CurrentValueByAngle(sizeMin[vigilancelevel], sizeMax[vigilancelevel], rotation.z));
+        Transform body = GetComponentInParent<NPC>().Body;
+        float angle = Mathf.Atan2(target.position.y - body.position.y, target.position.x - body.position.x) * Mathf.Rad2Deg;
+        Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
+        RotationView(targetRotation);
+    }
+
+    private void VigilanceZise()
+    {
+        zone.localScale = new Vector3(size[vigilancelevel], size[vigilancelevel], size[vigilancelevel]);
+        zoneView.localScale = new Vector3(size[vigilancelevel], size[vigilancelevel], size[vigilancelevel]);
+        view.fillAmount = angleView / 360;
+        view.transform.localRotation = Quaternion.Euler(0, 0, angleView / 2f);
     }
 }

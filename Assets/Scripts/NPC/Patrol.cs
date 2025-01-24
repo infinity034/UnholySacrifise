@@ -85,11 +85,4 @@ public class Patrol : NPC
             }
         }
     }
-
-    private void RotateToTarget(Transform target)
-    {
-        float angle = Mathf.Atan2(target.position.y - body.position.y, target.position.x - body.position.x) * Mathf.Rad2Deg;
-        Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
-        fieldView.DirectionView.rotation = Quaternion.RotateTowards(fieldView.DirectionView.rotation, targetRotation, 1000 * Time.deltaTime);
-    }
 }
