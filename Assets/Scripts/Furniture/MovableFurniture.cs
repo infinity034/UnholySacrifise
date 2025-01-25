@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Library : Furniture
+public class MovableFurniture : Furniture
 {
     [SerializeField]
     private GameObject[] point;
