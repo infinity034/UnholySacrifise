@@ -137,7 +137,11 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit\Character_SB
     guid: 59766cb317a37945b9bec1419a15a809
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8584638472401419475
+=======
+    m_lastTime: -8584638485882132397
+>>>>>>> Stashed changes
     List: []
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -150,7 +154,11 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: fed43d09f5254c4cac7f143423df7c69
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8584638472401419475
+=======
+    m_lastTime: -8584638485882132397
+>>>>>>> Stashed changes
     List: []
   - PhysicalPath: SoundBanks\Location.wwu
     PathAndIcons:
@@ -166,7 +174,11 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit\Location
     guid: 88c1b58aa61ff9408dbd3c99741c867d
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8584638472401409426
+=======
+    m_lastTime: -8584638485882122432
+>>>>>>> Stashed changes
     List:
     - name: Ambiance
       guid: d90add2f4c13bf4caad4f138f35381e4
@@ -256,7 +268,11 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit\Object
     guid: 19d5eb8f517bd240aa7ca496c216e81e
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8584638472401409426
+=======
+    m_lastTime: -8584638485882122432
+>>>>>>> Stashed changes
     List:
     - name: Altar
       guid: 0f0758edc976264e93b70d2ce99be874
@@ -566,7 +582,11 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit\UI
     guid: 7530e9e29a190542828cb39c4df125e2
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8584638472401409426
+=======
+    m_lastTime: -8584638485882112460
+>>>>>>> Stashed changes
     List:
     - name: Dagger
       guid: 5c5314c976e63a4197f872f55b8623c4
@@ -688,7 +708,11 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit\Character
     guid: 8f7bec1760e4c54d86129091e54fc4e8
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8584638472406312087
+=======
+    m_lastTime: -8584638485887340207
+>>>>>>> Stashed changes
     List:
     - name: Chill Trader
       guid: 15b5b74e85a44c499b58db5903c71bdf
@@ -1075,7 +1099,11 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c553561e2b797942960b99fc3ae1431a
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8584638472406301875
+=======
+    m_lastTime: -8584638485887340207
+>>>>>>> Stashed changes
     List: []
   - PhysicalPath: Events\Location.wwu
     PathAndIcons:
@@ -1091,7 +1119,11 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit\Location
     guid: 974d9ba2b99d2c4ba6799cbda3df4112
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8584638472406301875
+=======
+    m_lastTime: -8584638485887330236
+>>>>>>> Stashed changes
     List:
     - name: Ambiance
       guid: b0bd839db1f388469cef8be4cc752b3e
@@ -1193,7 +1225,11 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit\Object
     guid: c362c4e632666c4c92390beb3b13f9ce
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8584638472406301875
+=======
+    m_lastTime: -8584638485887330236
+>>>>>>> Stashed changes
     List:
     - name: Altar
       guid: 0a2ed748e4d4e646b5e7b475505a9db5
@@ -1571,7 +1607,11 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit\UI
     guid: a8dd7bed0478f14faae0ae381852bed0
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8584638472406291095
+=======
+    m_lastTime: -8584638485887320273
+>>>>>>> Stashed changes
     List:
     - name: Dagger
       guid: 35e2445a7a096241aaed6a221f6dacbc
@@ -1699,7 +1739,11 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 8ed85634b6426c4d9b80c50ea4f70b87
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8584638472401399219
+=======
+    m_lastTime: -8584638485882112460
+>>>>>>> Stashed changes
     List:
     - name: Karma
       guid: 2d3265ba7ef0cb44a4ca7b6f69523391
@@ -1781,7 +1825,11 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 9952fe3641688047a2b9ded91b1880fc
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8584638472401388936
+=======
+    m_lastTime: -8584638485882102469
+>>>>>>> Stashed changes
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
