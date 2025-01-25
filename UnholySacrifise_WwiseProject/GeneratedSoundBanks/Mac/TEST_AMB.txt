@@ -1,9 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	2959533290	Play_Amb			\Default Work Unit\Location\Ambiance\Play_Amb	
-
-In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	79503460	Drone PH 4	D:\GitKrakRepro\UnholySacrifise\UnholySacrifise_WwiseProject\.cache\F4\{F44EFF29-BDCE-ED16-6113-D96597B7F9D9}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Location\Ambiance\AM_TEST_PH\Random_Test\Drone PH 4		6334336
-	173636986	Drone PH	D:\GitKrakRepro\UnholySacrifise\UnholySacrifise_WwiseProject\.cache\61\{61E589ED-67CD-3B5A-6A16-4E37256D31EA}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Location\Ambiance\AM_TEST_PH\Random_Test\Drone PH		6334336
-	309662540	Drone PH 2	D:\GitKrakRepro\UnholySacrifise\UnholySacrifise_WwiseProject\.cache\16\{16BA8193-98F4-FBBE-61D3-E904B76CE164}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Location\Ambiance\AM_TEST_PH\Random_Test\Drone PH 2		6334336
-	664939833	Drone PH 3	D:\GitKrakRepro\UnholySacrifise\UnholySacrifise_WwiseProject\.cache\8A\{8A93385A-F2BA-80FE-3445-F3A55290316D}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Location\Ambiance\AM_TEST_PH\Random_Test\Drone PH 3		6334336
-
