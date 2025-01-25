@@ -5,7 +5,7 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
     [SerializeField]
-    protected Transform body;
+    protected Transform body, viewPoint;
 
     [SerializeField]
     protected FieldView fieldView;

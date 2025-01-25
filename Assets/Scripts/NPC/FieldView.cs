@@ -20,7 +20,12 @@ public class FieldView : MonoBehaviour
     [SerializeField]
     private float[] size;
 
+    [SerializeField]
+    private bool playerSeen;
+
     public Transform DirectionView { get {  return directionView; } }
+    public Transform Target { get { return target; } }
+    public bool PlayerSeen { get { return playerSeen; } }
 
     private void Awake()
     {
@@ -54,14 +59,18 @@ public class FieldView : MonoBehaviour
             {
                 if (Vector2.Distance(directionView.position, target.position) <= range)
                 {
-                    Debug.Log("Seen!");
+                    playerSeen = true;
                     Debug.DrawRay(directionView.position, dir, Color.red);
                     RotateToTarget(target);
                 }
                 else
                 {
-                    Debug.Log("Dont Seen");
+                    playerSeen = false;
                 }
+            }
+            else
+            {
+                playerSeen = false;
             }
         }
     }
@@ -70,6 +79,7 @@ public class FieldView : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            playerSeen = false;
             Debug.Log("Exit");
         }
     }
@@ -80,7 +90,7 @@ public class FieldView : MonoBehaviour
         rotationView.rotation = Quaternion.RotateTowards(rotationView.rotation, targetRotation, 1000 * Time.deltaTime);
     }
 
-    private void RotateToTarget(Transform target)
+    public void RotateToTarget(Transform target)
     {
         Transform body = GetComponentInParent<NPC>().Body;
         float angle = Mathf.Atan2(target.position.y - body.position.y, target.position.x - body.position.x) * Mathf.Rad2Deg;

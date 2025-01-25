@@ -1,42 +1,65 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Patrol : NPC
 {
     [SerializeField]
-    private Transform[] patrolPoints;
+    protected Transform patrolPoint, patrolPointParent, patrolPointBeforePlayerSeen;
 
     [SerializeField]
-    private int currentPoint;
+    protected List<Transform> patrolPoints;
 
     [SerializeField]
-    private bool patrolLoop, patrolReturn;
+    protected int currentPoint;
 
-    private void Start()
+    [SerializeField]
+    protected bool patrolLoop, patrolReturn;
+
+    protected virtual void Start()
     {
         StartCoroutine(PatrolMovement());
     }
 
-    private IEnumerator PatrolMovement()
+    protected void InstantiateAPatrolPoint(bool start = false)
     {
-        while(this.gameObject.activeSelf)
+        Transform go = Instantiate(patrolPoint, body.position, Quaternion.identity);
+        go.transform.SetParent(patrolPointParent.transform);
+        if(start)
         {
-            if(patrolPoints.Length > 0)
+            patrolPoints.Insert(0, go);
+        }
+        else
+        {
+            patrolPointBeforePlayerSeen = go;
+        }
+    }
+
+    protected virtual IEnumerator PatrolMovement()
+    {
+        InstantiateAPatrolPoint(true);
+        while (this.gameObject.activeSelf)
+        {
+            if(patrolPoints.Count > 1)
             {
                 MoveTo(patrolPoints[currentPoint]);
             }
+
             yield return null;
         }
     }
 
-    private void MoveTo(Transform point)
+    protected void MoveTo(Transform point, bool returnToPoint = false)
     {
         if (Vector3.Distance(body.position, point.position) > 0.001f)
         {
             body.position = Vector3.MoveTowards(body.position, point.position, 1f * Time.deltaTime);
             RotateToTarget(point);
+        }
+        else if (returnToPoint)
+        {
+            Destroy(patrolPointBeforePlayerSeen.gameObject);
+            patrolPointBeforePlayerSeen = null;
         }
         else
         {
@@ -44,11 +67,11 @@ public class Patrol : NPC
         }
     }
 
-    private void NewPoint(bool loop)
+    protected void NewPoint(bool loop)
     {
         if(loop)
         {
-            if (currentPoint < patrolPoints.Length -1)
+            if (currentPoint < patrolPoints.Count -1)
             {
                 currentPoint++;
             }
@@ -61,7 +84,7 @@ public class Patrol : NPC
         {
             if(patrolReturn)
             {
-                if (currentPoint < patrolPoints.Length - 1)
+                if (currentPoint < patrolPoints.Count - 1)
                 {
                     currentPoint++;
                 }
