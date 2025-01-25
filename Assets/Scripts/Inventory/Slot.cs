@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -5,6 +6,8 @@ using UnityEngine.UI;
 
 public class Slot : MonoBehaviour, IPointerClickHandler
 {
+    public int slotID;
+
     [SerializeField]
     private Item currentItem;
 
@@ -64,6 +67,10 @@ public class Slot : MonoBehaviour, IPointerClickHandler
         {
             currentItem.OnUse();
             RemoveItemToSlot();
+        }
+        else
+        {
+            Debug.Log("No Item In Slot " + slotID);
         }
     }
 }

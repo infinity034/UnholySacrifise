@@ -10,7 +10,7 @@ public class Item : ScriptableObject
 
     public Sprite SpriteIcon { get { return spriteIcon; } }
 
-    public virtual void OnUse()
+    public virtual void OnUse(Transform parent = null)
     {
 
     }

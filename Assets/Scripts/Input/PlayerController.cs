@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -28,11 +29,21 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         playerControls.Enable();
+        playerControls.Player.Slot0.performed += ctx => SlotAction(ctx, 0);
+        playerControls.Player.Slot1.performed += ctx => SlotAction(ctx, 1);
+        playerControls.Player.Slot2.performed += ctx => SlotAction(ctx, 2);
+        playerControls.Player.Slot3.performed += ctx => SlotAction(ctx, 3);
+        playerControls.Player.Slot4.performed += ctx => SlotAction(ctx, 4);
     }
 
     private void OnDisable()
     {
         playerControls.Disable();
+        playerControls.Player.Slot0.performed -= ctx => SlotAction(ctx, 0);
+        playerControls.Player.Slot1.performed -= ctx => SlotAction(ctx, 1);
+        playerControls.Player.Slot2.performed -= ctx => SlotAction(ctx, 2);
+        playerControls.Player.Slot3.performed -= ctx => SlotAction(ctx, 3);
+        playerControls.Player.Slot4.performed -= ctx => SlotAction(ctx, 4);
     }
 
     private void FixedUpdate()
@@ -50,5 +61,10 @@ public class PlayerController : MonoBehaviour
             float angle = Mathf.Atan2 (movement.y,movement.x) * Mathf.Rad2Deg;
             body.rotation = Quaternion.Euler(0,0,angle - 90f);
         }
+    }
+
+    private void SlotAction(InputAction.CallbackContext ctx, int v)
+    {
+        Inventory.Instance.Slots[v].UseItem();
     }
 }

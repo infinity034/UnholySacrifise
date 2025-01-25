@@ -10,13 +10,16 @@ public class Inventory : MonoBehaviour
     private Slot slotPrefabs;
 
     [SerializeField]
-    private Transform slotParent;
+    private Transform slotParent, mainHandParent;
 
     [SerializeField]
     private int slotAmount = 1;
 
     [SerializeField]
     private List<Slot> slots = new List<Slot>();
+
+    public List<Slot> Slots { get { return slots; } }
+    public Transform MainHandParent { get { return mainHandParent; } }
 
     private void Awake()
     {
@@ -37,6 +40,7 @@ public class Inventory : MonoBehaviour
             RectTransform rectTransform = slot.GetComponent<RectTransform>();
             rectTransform.localScale = Vector3.one;
             slot.name = "Slot (" + i + ")";
+            slot.slotID = i;
             slots.Add(slot);
         }
     }

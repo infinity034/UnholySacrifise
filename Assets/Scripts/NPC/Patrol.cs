@@ -5,7 +5,7 @@ using UnityEngine;
 public class Patrol : NPC
 {
     [SerializeField]
-    protected Transform patrolPoint, patrolPointParent, patrolPointBeforePlayerSeen;
+    protected Transform patrolPoint, patrolPointParent;
 
     [SerializeField]
     protected List<Transform> patrolPoints;
@@ -22,17 +22,13 @@ public class Patrol : NPC
         StartCoroutine(PatrolMovement());
     }
 
-    protected void InstantiateAPatrolPoint(bool start = false)
+    protected virtual void InstantiateAPatrolPoint(bool start = false)
     {
         Transform go = Instantiate(patrolPoint, body.position, Quaternion.identity);
         go.transform.SetParent(patrolPointParent.transform);
         if(start)
         {
             patrolPoints.Insert(0, go);
-        }
-        else
-        {
-            patrolPointBeforePlayerSeen = go;
         }
     }
 
@@ -51,14 +47,13 @@ public class Patrol : NPC
         }
     }
 
-    protected void MoveTo(Transform point, bool returnToPoint = false)
+    protected virtual void MoveTo(Transform point, bool returnToPoint = false)
     {
         if (Vector3.Distance(body.position, point.position) <= 0.5f)
         {
             if (returnToPoint)
             {
-                Destroy(patrolPointBeforePlayerSeen.gameObject);
-                patrolPointBeforePlayerSeen = null;
+                
             }
             else
             {
