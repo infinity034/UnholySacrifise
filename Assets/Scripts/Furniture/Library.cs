@@ -7,34 +7,18 @@ public class Library : Furniture
     private GameObject[] point;
 
     [SerializeField]
-    private bool enter ,open, moving;
-
-    protected override void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            enter = true;
-        }
-    }
+    private bool open, moving;
 
     protected override void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (PlayerController.Instance.PlayerControls.Player.Action.IsPressed() && !moving)
+            if (PlayerController.Instance.PlayerControls.Player.Interact.IsPressed() && !moving)
             {
                 open = !open;
                 moving = true;
                 StartCoroutine(MoveLibrary());
             }
-        }
-    }
-
-    protected override void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            enter = false;
         }
     }
 

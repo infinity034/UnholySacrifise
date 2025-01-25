@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class Door : Furniture
 {
@@ -10,7 +7,7 @@ public class Door : Furniture
         if (collision.gameObject.CompareTag("NPC"))
         {
             Debug.Log("enter");
-            collider2D.enabled = false;
+            GetComponent<Collider2D>().enabled = false;
         }
     }
 
@@ -27,7 +24,7 @@ public class Door : Furniture
         if (collision.gameObject.CompareTag("NPC"))
         {
             Debug.Log("exit");
-            collider2D.enabled = true;
+            GetComponent<Collider2D>().enabled = true;
         }
     }
 }

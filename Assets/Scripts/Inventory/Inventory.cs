@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    public static Inventory Instance;
+
     [SerializeField]
     private Slot slotPrefabs;
 
@@ -15,6 +17,11 @@ public class Inventory : MonoBehaviour
 
     [SerializeField]
     private List<Slot> slots = new List<Slot>();
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -34,17 +41,18 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void AddNewItemToFirstSlot(Item item)
+    public bool AddNewItemToFirstSlot(Item item, int add)
     {
         foreach (Slot slot in slots)
         {
-            if (!slot.CurrentItem)
+            if (!slot.CurrentItem || item == slot.CurrentItem)
             {
-                slot.AddItemToSlot(item);
-                return;
+                slot.AddItemToSlot(item, add);
+                return true;
             }
         }
 
         Debug.Log("Inventory is full!");
+        return false;
     }
 }

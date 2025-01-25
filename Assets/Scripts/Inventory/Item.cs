@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "Test", menuName = "Item")]
 public class Item : ScriptableObject
 {
     [SerializeField]
-    private Sprite spriteIcon;
+    protected Sprite spriteIcon;
 
     public Sprite SpriteIcon { get { return spriteIcon; } }
 

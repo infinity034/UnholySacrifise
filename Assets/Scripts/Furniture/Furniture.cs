@@ -4,14 +4,6 @@ using UnityEngine;
 
 public class Furniture : MonoBehaviour
 {
-    [SerializeField]
-    protected Collider2D collider2D;
-
-    protected virtual void Start()
-    {
-        collider2D = GetComponent<Collider2D>();
-    }
-
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         
