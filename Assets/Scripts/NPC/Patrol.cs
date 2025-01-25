@@ -37,7 +37,12 @@ public class Patrol : NPC
         InstantiateAPatrolPoint(true);
         while (this.gameObject.activeSelf)
         {
-            if(patrolPoints.Count > 1)
+            if (patrolPoints.Count == 1 && !fieldView.PlayerSeen)
+            {
+                fieldView.RotateToTarget(viewPoint);
+            }
+
+            if (patrolPoints.Count > 1)
             {
                 agent.SetDestination(patrolPoints[currentPoint].position);
                 MoveTo(patrolPoints[currentPoint]);

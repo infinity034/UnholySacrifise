@@ -14,6 +14,9 @@ public class NPC : MonoBehaviour
     [SerializeField]
     protected NavMeshAgent agent;
 
+    [SerializeField]
+    protected Item itemInventory;
+
     public Transform Body {  get { return body; } }
     public FieldView FieldView { get { return fieldView; } }
 

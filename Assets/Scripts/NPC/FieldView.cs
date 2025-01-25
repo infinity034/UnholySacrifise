@@ -21,12 +21,13 @@ public class FieldView : MonoBehaviour
     private float[] size;
 
     [SerializeField]
-    private bool playerSeen, interaction;
+    private bool playerSeen, interaction, interactable;
 
     public Transform DirectionView { get {  return directionView; } }
     public Transform Target { get { return target; } }
     public bool PlayerSeen { get { return playerSeen; } }
     public bool Interaction { get { return interaction; } set { interaction = value; } }
+    public bool Interactable { get { return interactable; } }
 
     private void Awake()
     {
@@ -51,6 +52,7 @@ public class FieldView : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            interactable = true;
             VigilanceZise();
             Vector2 dir = collision.gameObject.transform.position - directionView.position;
             float angle = Vector3.Angle(dir, directionView.up);
@@ -100,6 +102,7 @@ public class FieldView : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             playerSeen = false;
+            interactable = false;
             Debug.Log("Exit");
         }
     }
