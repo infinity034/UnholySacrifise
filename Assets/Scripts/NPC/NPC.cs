@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class NPC : MonoBehaviour
 {
@@ -10,11 +11,15 @@ public class NPC : MonoBehaviour
     [SerializeField]
     protected FieldView fieldView;
 
+    [SerializeField]
+    protected NavMeshAgent agent;
+
     public Transform Body {  get { return body; } }
 
-    protected virtual void Awake()
+    protected virtual void Start()
     {
-        
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
     }
 
     protected void RotateToTarget(Transform target)

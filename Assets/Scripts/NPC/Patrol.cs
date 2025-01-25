@@ -16,8 +16,9 @@ public class Patrol : NPC
     [SerializeField]
     protected bool patrolLoop, patrolReturn;
 
-    protected virtual void Start()
+    protected override void Start()
     {
+        base.Start();
         StartCoroutine(PatrolMovement());
     }
 
@@ -42,6 +43,7 @@ public class Patrol : NPC
         {
             if(patrolPoints.Count > 1)
             {
+                agent.SetDestination(patrolPoints[currentPoint].position);
                 MoveTo(patrolPoints[currentPoint]);
             }
 
@@ -51,19 +53,17 @@ public class Patrol : NPC
 
     protected void MoveTo(Transform point, bool returnToPoint = false)
     {
-        if (Vector3.Distance(body.position, point.position) > 0.001f)
+        if (Vector3.Distance(body.position, point.position) <= 0.5f)
         {
-            body.position = Vector3.MoveTowards(body.position, point.position, 1f * Time.deltaTime);
-            RotateToTarget(point);
-        }
-        else if (returnToPoint)
-        {
-            Destroy(patrolPointBeforePlayerSeen.gameObject);
-            patrolPointBeforePlayerSeen = null;
-        }
-        else
-        {
-            NewPoint(patrolLoop);
+            if (returnToPoint)
+            {
+                Destroy(patrolPointBeforePlayerSeen.gameObject);
+                patrolPointBeforePlayerSeen = null;
+            }
+            else
+            {
+                NewPoint(patrolLoop);
+            }
         }
     }
 
