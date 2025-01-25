@@ -6,11 +6,11 @@ public class FieldView : MonoBehaviour
     [SerializeField]
     private Image view;
     [SerializeField]
-    private float angleView = 90f;
+    private float angleView = 90f, angleInteraction = 10f;
     [SerializeField]
     private Transform directionView, rotationView, zone, zoneView;
     [SerializeField]
-    private float range = 10;
+    private float range = 10f, interactRange = 1f;
     [SerializeField]
     private int vigilancelevel = 1;
 
@@ -21,11 +21,12 @@ public class FieldView : MonoBehaviour
     private float[] size;
 
     [SerializeField]
-    private bool playerSeen;
+    private bool playerSeen, interaction;
 
     public Transform DirectionView { get {  return directionView; } }
     public Transform Target { get { return target; } }
     public bool PlayerSeen { get { return playerSeen; } }
+    public bool Interaction { get { return interaction; } set { interaction = value; } }
 
     private void Awake()
     {
@@ -51,17 +52,17 @@ public class FieldView : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             VigilanceZise();
-            Vector2 dir = target.position - directionView.position;
+            Vector2 dir = collision.gameObject.transform.position - directionView.position;
             float angle = Vector3.Angle(dir, directionView.up);
             RaycastHit2D r = Physics2D.Raycast(directionView.position, dir, range);
 
             if (angle < angleView / 2)
             {
-                if (Vector2.Distance(directionView.position, target.position) <= range)
+                if (Vector2.Distance(directionView.position, collision.gameObject.transform.position) <= range)
                 {
                     playerSeen = true;
                     Debug.DrawRay(directionView.position, dir, Color.red);
-                    RotateToTarget(target);
+                    RotateToTarget(collision.gameObject.transform);
                 }
                 else
                 {
@@ -73,6 +74,25 @@ public class FieldView : MonoBehaviour
                 playerSeen = false;
             }
         }
+        else if (collision.gameObject.CompareTag("Door"))
+        {
+            VigilanceZise();
+            Vector2 dir = collision.gameObject.transform.position - directionView.position;
+            float angle = Vector3.Angle(dir, directionView.up);
+            RaycastHit2D r = Physics2D.Raycast(directionView.position, dir, interactRange);
+
+            if (angle < angleInteraction / 2)
+            {
+                if (Vector2.Distance(directionView.position, collision.gameObject.transform.position) <= interactRange)
+                {
+                    interaction = true;
+                    Debug.DrawRay(directionView.position, dir, Color.red);
+                    collision.gameObject.GetComponentInParent<MovableFurniture>().Use(GetComponentInParent<NPC>());
+                    //RotateToTarget(collision.gameObject.transform);
+                }
+            }
+        }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)

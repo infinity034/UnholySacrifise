@@ -15,6 +15,7 @@ public class NPC : MonoBehaviour
     protected NavMeshAgent agent;
 
     public Transform Body {  get { return body; } }
+    public FieldView FieldView { get { return fieldView; } }
 
     protected virtual void Start()
     {
