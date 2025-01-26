@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4877dca2ee94337449709d1e1d49f2df, type: 3}
   m_Name: Contract
   m_EditorClassIdentifier: 
+  itemGo: {fileID: 6212455263299475887, guid: 0eefa4fe5defc46459d5d6f89d738d0a, type: 3}
   spriteIcon: {fileID: -2135585597343286014, guid: 5aa8b770bc43046bc8d993d0d5b7f4a5, type: 3}
+  canBeDrop: 0

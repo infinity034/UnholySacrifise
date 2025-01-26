@@ -5,11 +5,18 @@ using UnityEngine.UI;
 
 public class ImpactBar : MonoBehaviour
 {
+    public static ImpactBar Instance;
+
     [SerializeField]
     private Image goodFill, badFill;
 
     [SerializeField]
     private float goodAmount, badAmount, maxAmount;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     public void SetImpactBar(float value, bool good)
     {
