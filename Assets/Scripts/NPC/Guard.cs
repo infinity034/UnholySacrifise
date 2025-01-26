@@ -64,21 +64,18 @@ public class Guard : Patrol
 
                 if (patrolPoints.Count > 1 && !zone.PlayerSeen && !patrolPointBeforePlayerSeen)
                 {
-                    //Debug.Log("1.1");
                     RotateToTarget(patrolPoints[currentPoint]);
                     agent.SetDestination(patrolPoints[currentPoint].position);
                     MoveTo(patrolPoints[currentPoint], patrolPoints.Count);
                 }
                 else if (patrolPointBeforePlayerSeen && !zone.PlayerSeen)
                 {
-                    //Debug.Log("1.2");
                     RotateToTarget(patrolPointBeforePlayerSeen);
                     agent.SetDestination(patrolPointBeforePlayerSeen.position);
                     MoveTo(patrolPointBeforePlayerSeen, 1, true);
                 }
                 else if (zone.PlayerSeen)
                 {
-                    //Debug.Log("1.3");
                     RotateToTarget(zone.Target);
                     agent.SetDestination(zone.Target.position);
                     MoveTo(zone.Target, 1);
@@ -87,7 +84,7 @@ public class Guard : Patrol
             else
             {
                 agent.isStopped = true;
-                Debug.Log("Waiting");
+                //Debug.Log("Waiting");
             }
 
             yield return null;

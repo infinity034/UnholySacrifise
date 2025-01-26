@@ -46,20 +46,15 @@ public class Patrol : NPC
         {
             if(eventPatrols.Count > 0)
             {
-                Debug.Log("1.1");
                 if (currentEventPatrol.patrolPoints.Count == 0)
                 {
-                    Debug.Log("1.11");
                     foreach (EventPatrol ep in eventPatrols)
                     {
-                        Debug.Log("1.12");
                         if (DayClock.Instance.CurrentDay == ep.specificDay || ep.specificDay == 0)
                         {
-                            Debug.Log("1.3");
-                            Debug.Log(DayClock.Instance.FillAmount + " == " + ep.TimeToProc);
+                            //Debug.Log(DayClock.Instance.FillAmount + " == " + ep.TimeToProc);
                             if (DayClock.Instance.FillAmount == ep.TimeToProc)
                             {
-                                Debug.Log("1.4");
                                 currentPoint = 0;
                                 currentEventPatrol = ep;
                             }
@@ -68,7 +63,6 @@ public class Patrol : NPC
                 }
                 else
                 {
-                    Debug.Log("1.2");
                     if (Vector3.Distance(body.position, currentEventPatrol.patrolPoints[currentPoint].position) <= 0.5f)
                     {
                         currentPoint++;
