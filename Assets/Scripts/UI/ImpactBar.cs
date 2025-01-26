@@ -31,7 +31,7 @@ public class ImpactBar : MonoBehaviour
             {
                 badAmount = 0;
                 StartCoroutine(FillOverTime(badFill, badAmount, false));
-                goodAmount = value - badAmount;
+                goodAmount += value - badAmount;
                 StartCoroutine(FillOverTime(goodFill, goodAmount, true));
             }
             else
@@ -40,6 +40,13 @@ public class ImpactBar : MonoBehaviour
                 StartCoroutine(FillOverTime(badFill, badAmount, false));
                 goodAmount = 0;
                 StartCoroutine(FillOverTime(goodFill, goodAmount, true));
+            }
+
+            if (goodAmount >= maxAmount)
+            {
+                goodAmount = maxAmount;
+                goodFill.fillAmount = 1;
+                badFill.fillAmount = 0;
             }
         }
         else
@@ -53,7 +60,7 @@ public class ImpactBar : MonoBehaviour
             {
                 goodAmount = 0;
                 StartCoroutine(FillOverTime(goodFill, goodAmount, false));
-                badAmount = value - goodAmount;
+                badAmount += value - goodAmount;
                 StartCoroutine(FillOverTime(badFill, badAmount, true));
             }
             else
@@ -62,6 +69,13 @@ public class ImpactBar : MonoBehaviour
                 StartCoroutine(FillOverTime(goodFill, goodAmount, false));
                 badAmount = 0;
                 StartCoroutine(FillOverTime(badFill, badAmount, true));
+            }
+
+            if (badAmount >= maxAmount)
+            {
+                badAmount = maxAmount;
+                goodFill.fillAmount = 0;
+                badFill.fillAmount = 1;
             }
         }
     }

@@ -44,8 +44,14 @@ public class Patrol : NPC
 
             if (patrolPoints.Count > 1)
             {
+                agent.isStopped = false;
                 agent.SetDestination(patrolPoints[currentPoint].position);
                 MoveTo(patrolPoints[currentPoint]);
+            }
+            else
+            {
+                agent.isStopped = true;
+                Debug.Log("Waiting");
             }
 
             yield return null;
