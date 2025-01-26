@@ -14,14 +14,14 @@ public class Villager : Patrol
     {
         while (this.gameObject.activeSelf)
         {
-            if (fieldView.PlayerSeen && fieldView.Interactable)
+            if (zone.PlayerSeen && zone.Interactable)
             {
                 if (PlayerController.Instance.PlayerControls.Player.Interact.IsPressed())
                 {
                     SpeakToNPC();
                 }
             }
-            else if(!fieldView.PlayerSeen && fieldView.Interactable) 
+            else if(!zone.PlayerSeen && zone.Interactable) 
             {
                 if (PlayerController.Instance.PlayerControls.Player.Interact.IsPressed())
                 {

@@ -34,6 +34,9 @@ public class PlayerController : MonoBehaviour
         playerControls.Player.Slot2.performed += ctx => SlotAction(ctx, 2);
         playerControls.Player.Slot3.performed += ctx => SlotAction(ctx, 3);
         playerControls.Player.Slot4.performed += ctx => SlotAction(ctx, 4);
+        playerControls.Player.Slot2.performed += ctx => SlotAction(ctx, 5);
+        playerControls.Player.Slot3.performed += ctx => SlotAction(ctx, 6);
+        playerControls.Player.Slot4.performed += ctx => SlotAction(ctx, 7);
     }
 
     private void OnDisable()
@@ -44,6 +47,9 @@ public class PlayerController : MonoBehaviour
         playerControls.Player.Slot2.performed -= ctx => SlotAction(ctx, 2);
         playerControls.Player.Slot3.performed -= ctx => SlotAction(ctx, 3);
         playerControls.Player.Slot4.performed -= ctx => SlotAction(ctx, 4);
+        playerControls.Player.Slot2.performed -= ctx => SlotAction(ctx, 5);
+        playerControls.Player.Slot3.performed -= ctx => SlotAction(ctx, 6);
+        playerControls.Player.Slot4.performed -= ctx => SlotAction(ctx, 7);
     }
 
     private void FixedUpdate()

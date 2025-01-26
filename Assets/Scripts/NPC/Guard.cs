@@ -48,40 +48,40 @@ public class Guard : Patrol
         InstantiateAPatrolPoint(true);
         while (this.gameObject.activeSelf)
         {
-            if(!fieldView.Interaction)
+            if(!zone.Interaction)
             {
                 agent.isStopped = false;
 
-                if (patrolPoints.Count == 1 && !fieldView.PlayerSeen)
+                if (patrolPoints.Count == 1 && !zone.PlayerSeen)
                 {
-                    fieldView.RotateToTarget(viewPoint);
+                    zone.RotateToTarget(viewPoint);
                 }
 
-                if (fieldView.PlayerSeen && !patrolPointBeforePlayerSeen)
+                if (zone.PlayerSeen && !patrolPointBeforePlayerSeen)
                 {
                     InstantiateAPatrolPoint();
                 }
 
-                if (patrolPoints.Count > 1 && !fieldView.PlayerSeen && !patrolPointBeforePlayerSeen)
+                if (patrolPoints.Count > 1 && !zone.PlayerSeen && !patrolPointBeforePlayerSeen)
                 {
                     //Debug.Log("1.1");
                     RotateToTarget(patrolPoints[currentPoint]);
                     agent.SetDestination(patrolPoints[currentPoint].position);
                     MoveTo(patrolPoints[currentPoint]);
                 }
-                else if (patrolPointBeforePlayerSeen && !fieldView.PlayerSeen)
+                else if (patrolPointBeforePlayerSeen && !zone.PlayerSeen)
                 {
                     //Debug.Log("1.2");
                     RotateToTarget(patrolPointBeforePlayerSeen);
                     agent.SetDestination(patrolPointBeforePlayerSeen.position);
                     MoveTo(patrolPointBeforePlayerSeen, true);
                 }
-                else if (fieldView.PlayerSeen)
+                else if (zone.PlayerSeen)
                 {
                     //Debug.Log("1.3");
-                    RotateToTarget(fieldView.Target);
-                    agent.SetDestination(fieldView.Target.position);
-                    MoveTo(fieldView.Target);
+                    RotateToTarget(zone.Target);
+                    agent.SetDestination(zone.Target.position);
+                    MoveTo(zone.Target);
                 }
             }
             else

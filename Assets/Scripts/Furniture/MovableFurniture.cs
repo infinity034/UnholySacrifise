@@ -35,7 +35,7 @@ public class MovableFurniture : Furniture
                     moving = false;
                     if (npcInteraction)
                     {
-                        npcInteraction.FieldView.Interaction = false;
+                        npcInteraction.Zone.Interaction = false;
                     }
                 }
             }
@@ -47,7 +47,7 @@ public class MovableFurniture : Furniture
                     moving = false;
                     if (npcInteraction)
                     {
-                        npcInteraction.FieldView.Interaction = false;
+                        npcInteraction.Zone.Interaction = false;
                     }
                 }
             }

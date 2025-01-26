@@ -16,6 +16,9 @@ public class NPC : MonoBehaviour
     protected FieldView fieldView;
 
     [SerializeField]
+    protected Zone zone;
+
+    [SerializeField]
     protected NavMeshAgent agent;
 
     [SerializeField]
@@ -23,6 +26,7 @@ public class NPC : MonoBehaviour
 
     public Transform Body {  get { return body; } }
     public FieldView FieldView { get { return fieldView; } }
+    public Zone Zone { get { return zone; } }
 
     protected virtual void Start()
     {
@@ -34,7 +38,7 @@ public class NPC : MonoBehaviour
     {
         float angle = Mathf.Atan2(target.position.y - body.position.y, target.position.x - body.position.x) * Mathf.Rad2Deg;
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
-        fieldView.RotationView(targetRotation);
+        zone.RotationView(targetRotation);
     }
 
     protected void StealNPC()

@@ -91,6 +91,33 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""Slot 5"",
+                    ""type"": ""Button"",
+                    ""id"": ""577f5cb9-98cc-468f-91d6-059dbf90ab1b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Slot 6"",
+                    ""type"": ""Button"",
+                    ""id"": ""1adce627-411c-461d-b72c-3022fdfb10b8"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Slot 7"",
+                    ""type"": ""Button"",
+                    ""id"": ""0488271d-b0bb-43ce-9e55-7a9bb6e9e875"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Mouse"",
                     ""type"": ""Value"",
                     ""id"": ""ff993494-d6ad-47c9-a875-0c975fee81ad"",
@@ -224,6 +251,39 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""a921c2d1-7f1c-4283-b229-25cb1f27a282"",
+                    ""path"": ""<Keyboard>/6"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Slot 5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""620cdf5e-134a-4ca5-969e-93330f863ff7"",
+                    ""path"": ""<Keyboard>/7"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Slot 6"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5a024d40-bc9d-42af-a2be-91a3c5c7b367"",
+                    ""path"": ""<Keyboard>/8"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Slot 7"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""837ac452-9fd5-4129-955b-93a4dffab698"",
                     ""path"": ""<Mouse>/position"",
                     ""interactions"": """",
@@ -258,6 +318,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Player_Slot2 = m_Player.FindAction("Slot 2", throwIfNotFound: true);
         m_Player_Slot3 = m_Player.FindAction("Slot 3", throwIfNotFound: true);
         m_Player_Slot4 = m_Player.FindAction("Slot 4", throwIfNotFound: true);
+        m_Player_Slot5 = m_Player.FindAction("Slot 5", throwIfNotFound: true);
+        m_Player_Slot6 = m_Player.FindAction("Slot 6", throwIfNotFound: true);
+        m_Player_Slot7 = m_Player.FindAction("Slot 7", throwIfNotFound: true);
         m_Player_Mouse = m_Player.FindAction("Mouse", throwIfNotFound: true);
     }
 
@@ -332,6 +395,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Slot2;
     private readonly InputAction m_Player_Slot3;
     private readonly InputAction m_Player_Slot4;
+    private readonly InputAction m_Player_Slot5;
+    private readonly InputAction m_Player_Slot6;
+    private readonly InputAction m_Player_Slot7;
     private readonly InputAction m_Player_Mouse;
     public struct PlayerActions
     {
@@ -344,6 +410,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Slot2 => m_Wrapper.m_Player_Slot2;
         public InputAction @Slot3 => m_Wrapper.m_Player_Slot3;
         public InputAction @Slot4 => m_Wrapper.m_Player_Slot4;
+        public InputAction @Slot5 => m_Wrapper.m_Player_Slot5;
+        public InputAction @Slot6 => m_Wrapper.m_Player_Slot6;
+        public InputAction @Slot7 => m_Wrapper.m_Player_Slot7;
         public InputAction @Mouse => m_Wrapper.m_Player_Mouse;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
@@ -375,6 +444,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Slot4.started += instance.OnSlot4;
             @Slot4.performed += instance.OnSlot4;
             @Slot4.canceled += instance.OnSlot4;
+            @Slot5.started += instance.OnSlot5;
+            @Slot5.performed += instance.OnSlot5;
+            @Slot5.canceled += instance.OnSlot5;
+            @Slot6.started += instance.OnSlot6;
+            @Slot6.performed += instance.OnSlot6;
+            @Slot6.canceled += instance.OnSlot6;
+            @Slot7.started += instance.OnSlot7;
+            @Slot7.performed += instance.OnSlot7;
+            @Slot7.canceled += instance.OnSlot7;
             @Mouse.started += instance.OnMouse;
             @Mouse.performed += instance.OnMouse;
             @Mouse.canceled += instance.OnMouse;
@@ -403,6 +481,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Slot4.started -= instance.OnSlot4;
             @Slot4.performed -= instance.OnSlot4;
             @Slot4.canceled -= instance.OnSlot4;
+            @Slot5.started -= instance.OnSlot5;
+            @Slot5.performed -= instance.OnSlot5;
+            @Slot5.canceled -= instance.OnSlot5;
+            @Slot6.started -= instance.OnSlot6;
+            @Slot6.performed -= instance.OnSlot6;
+            @Slot6.canceled -= instance.OnSlot6;
+            @Slot7.started -= instance.OnSlot7;
+            @Slot7.performed -= instance.OnSlot7;
+            @Slot7.canceled -= instance.OnSlot7;
             @Mouse.started -= instance.OnMouse;
             @Mouse.performed -= instance.OnMouse;
             @Mouse.canceled -= instance.OnMouse;
@@ -432,6 +519,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnSlot2(InputAction.CallbackContext context);
         void OnSlot3(InputAction.CallbackContext context);
         void OnSlot4(InputAction.CallbackContext context);
+        void OnSlot5(InputAction.CallbackContext context);
+        void OnSlot6(InputAction.CallbackContext context);
+        void OnSlot7(InputAction.CallbackContext context);
         void OnMouse(InputAction.CallbackContext context);
     }
 }

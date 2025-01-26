@@ -37,9 +37,9 @@ public class Patrol : NPC
         InstantiateAPatrolPoint(true);
         while (this.gameObject.activeSelf)
         {
-            if (patrolPoints.Count == 1 && !fieldView.PlayerSeen)
+            if (patrolPoints.Count == 1 && !zone.PlayerSeen)
             {
-                fieldView.RotateToTarget(viewPoint);
+                zone.RotateToTarget(viewPoint);
             }
 
             if (patrolPoints.Count > 1)

@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class DayClock : MonoBehaviour
 {
+    public static DayClock Instance;
+
     [SerializeField]
     private Image imageFill;
 
@@ -20,7 +22,14 @@ public class DayClock : MonoBehaviour
     [SerializeField]
     private float dayTime;
 
+    private int count = 0;
+
     public float FillAmount { get { return imageFill.fillAmount; } }
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -33,9 +42,19 @@ public class DayClock : MonoBehaviour
         StartCoroutine(ShowDayFill());
     }
 
+    public void SkipADay()
+    {
+        if (day < maxDay)
+        {
+            count = 0;
+            day++;
+            dayClockTxt.text = "Day " + day;
+        }
+    }
+
     private IEnumerator ShowDayFill()
     {
-        float count = 0;
+        count = 0;
         do
         {
             imageFill.fillAmount = 1f - (count / dayTime);
