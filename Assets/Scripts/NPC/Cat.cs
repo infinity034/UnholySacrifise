@@ -10,6 +10,9 @@ public class Cat : Patrol
     [SerializeField]
     protected bool isPetting;
 
+    [SerializeField]
+    protected GameObject fishLocated;
+
     protected override void Start()
     {
         base.Start();
@@ -32,6 +35,38 @@ public class Cat : Patrol
         }
     }
 
+    protected override IEnumerator PatrolMovement()
+    {
+        InstantiateAPatrolPoint(true);
+        while (this.gameObject.activeSelf)
+        {
+            if (patrolPoints.Count == 1 && !zone.PlayerSeen && !fishLocated)
+            {
+                zone.RotateToTarget(viewPoint);
+            }
+
+            if (fishLocated)
+            {
+                agent.isStopped = false;
+                agent.SetDestination(fishLocated.transform.position);
+                zone.RotateToTarget(fishLocated.transform);
+            }
+            else if (patrolPoints.Count > 1)
+            {
+                agent.isStopped = false;
+                agent.SetDestination(patrolPoints[currentPoint].position);
+                MoveTo(patrolPoints[currentPoint]);
+            }
+            else
+            {
+                agent.isStopped = true;
+                Debug.Log("Waiting");
+            }
+
+            yield return null;
+        }
+    }
+
     protected void Pet()
     {
         isPetting = true;
@@ -43,5 +78,10 @@ public class Cat : Patrol
         ImpactBar.Instance.SetImpactBar(10, true);
         yield return new WaitForSeconds(delay);
         isPetting = false;
+    }
+
+    public void RunToFish(GameObject go)
+    {
+        fishLocated = go;
     }
 }

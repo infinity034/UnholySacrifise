@@ -3,10 +3,10 @@ using UnityEngine;
 public class ItemGo : Furniture
 {
     [SerializeField]
-    private Item currentItem;
+    protected Item currentItem;
 
     [SerializeField]
-    private int amount = 1;
+    protected int amount = 1;
 
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
