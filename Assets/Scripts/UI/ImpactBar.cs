@@ -80,6 +80,14 @@ public class ImpactBar : MonoBehaviour
         }
     }
 
+    public void ResetToZero()
+    {
+        goodAmount = 0;
+        StartCoroutine(FillOverTime(goodFill, goodAmount, false));
+        badAmount = 0;
+        StartCoroutine(FillOverTime(badFill, badAmount, false));
+    }
+
     private IEnumerator FillOverTime(Image fill, float amount, bool add)
     {
         if (add)

@@ -27,7 +27,7 @@ public class Guard : Patrol
         }
     }
 
-    protected override void MoveTo(Transform point, bool returnToPoint = false)
+    protected override void MoveTo(Transform point, int count, bool returnToPoint = false)
     {
         if (Vector3.Distance(body.position, point.position) <= 0.5f)
         {
@@ -38,7 +38,7 @@ public class Guard : Patrol
             }
             else
             {
-                NewPoint(patrolLoop);
+                NewPoint(patrolLoop, count);
             }
         }
     }
@@ -64,30 +64,27 @@ public class Guard : Patrol
 
                 if (patrolPoints.Count > 1 && !zone.PlayerSeen && !patrolPointBeforePlayerSeen)
                 {
-                    //Debug.Log("1.1");
                     RotateToTarget(patrolPoints[currentPoint]);
                     agent.SetDestination(patrolPoints[currentPoint].position);
-                    MoveTo(patrolPoints[currentPoint]);
+                    MoveTo(patrolPoints[currentPoint], patrolPoints.Count);
                 }
                 else if (patrolPointBeforePlayerSeen && !zone.PlayerSeen)
                 {
-                    //Debug.Log("1.2");
                     RotateToTarget(patrolPointBeforePlayerSeen);
                     agent.SetDestination(patrolPointBeforePlayerSeen.position);
-                    MoveTo(patrolPointBeforePlayerSeen, true);
+                    MoveTo(patrolPointBeforePlayerSeen, 1, true);
                 }
                 else if (zone.PlayerSeen)
                 {
-                    //Debug.Log("1.3");
                     RotateToTarget(zone.Target);
                     agent.SetDestination(zone.Target.position);
-                    MoveTo(zone.Target);
+                    MoveTo(zone.Target, 1);
                 }
             }
             else
             {
                 agent.isStopped = true;
-                Debug.Log("Waiting");
+                //Debug.Log("Waiting");
             }
 
             yield return null;

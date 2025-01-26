@@ -27,6 +27,9 @@ public class NPC : MonoBehaviour
     [SerializeField]
     protected List<Item> itemNeed;
 
+    [SerializeField]
+    protected int StealPoints;
+
     public Transform Body {  get { return body; } }
     public FieldView FieldView { get { return fieldView; } }
     public Zone Zone { get { return zone; } }
@@ -53,6 +56,7 @@ public class NPC : MonoBehaviour
             if(Inventory.Instance.AddNewItemToFirstSlot(itemInventory[rd], 1))
             {
                 itemInventory.RemoveAt(rd);
+                ImpactBar.Instance.SetImpactBar(5, false);
             }
         }
     }
