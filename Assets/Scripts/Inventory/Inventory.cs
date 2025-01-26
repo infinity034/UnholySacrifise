@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour
     private Slot slotPrefabs;
 
     [SerializeField]
-    private Transform slotParent, mainHandParent;
+    private Transform slotParent, itemParent;
 
     [SerializeField]
     private int slotAmount = 1;
@@ -19,7 +19,7 @@ public class Inventory : MonoBehaviour
     private List<Slot> slots = new List<Slot>();
 
     public List<Slot> Slots { get { return slots; } }
-    public Transform MainHandParent { get { return mainHandParent; } }
+    public Transform ItemParent { get { return itemParent; } }
 
     private void Awake()
     {

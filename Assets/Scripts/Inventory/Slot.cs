@@ -65,7 +65,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
     {
         if (currentItem)
         {
-            currentItem.OnUse();
+            currentItem.OnUse(Inventory.Instance.ItemParent, Player.Instance.Body);
             RemoveItemToSlot();
         }
         else

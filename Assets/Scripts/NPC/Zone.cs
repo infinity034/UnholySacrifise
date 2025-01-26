@@ -11,7 +11,7 @@ public class Zone : MonoBehaviour
     [SerializeField]
     private Transform directionView, rotationView, zone, zoneView;
     [SerializeField]
-    private float range = 10f, interactRange = 1f;
+    private float interactRange = 1f;
     [SerializeField]
     private int vigilancelevel = 1;
 

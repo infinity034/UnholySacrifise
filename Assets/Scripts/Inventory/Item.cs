@@ -17,8 +17,12 @@ public class Item : ScriptableObject
     public Sprite SpriteIcon { get { return spriteIcon; } }
     public bool CanBeDrop { get { return canBeDrop; } }
 
-    public virtual void OnUse(Transform parent = null)
+    public virtual void OnUse(Transform parent, Transform pos)
     {
-        
+        if(canBeDrop)
+        {
+            GameObject go = Instantiate(itemGo, pos.position, Quaternion.identity);
+            go.transform.parent = parent;
+        }
     }
 }

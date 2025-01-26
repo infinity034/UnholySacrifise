@@ -24,6 +24,9 @@ public class NPC : MonoBehaviour
     [SerializeField]
     protected List<Item> itemInventory;
 
+    [SerializeField]
+    protected List<Item> itemNeed;
+
     public Transform Body {  get { return body; } }
     public FieldView FieldView { get { return fieldView; } }
     public Zone Zone { get { return zone; } }
