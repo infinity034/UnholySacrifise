@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+public enum Alignement { Good, Bad, Both}
 public class NPC : MonoBehaviour
 {
+    [SerializeField]
+    protected Alignement alignement;
+
     [SerializeField]
     protected Transform body, viewPoint;
 
@@ -15,7 +19,7 @@ public class NPC : MonoBehaviour
     protected NavMeshAgent agent;
 
     [SerializeField]
-    protected Item itemInventory;
+    protected List<Item> itemInventory;
 
     public Transform Body {  get { return body; } }
     public FieldView FieldView { get { return fieldView; } }
@@ -31,5 +35,23 @@ public class NPC : MonoBehaviour
         float angle = Mathf.Atan2(target.position.y - body.position.y, target.position.x - body.position.x) * Mathf.Rad2Deg;
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
         fieldView.RotationView(targetRotation);
+    }
+
+    protected void StealNPC()
+    {
+        if (itemInventory.Count >= 1)
+        {
+            int rd = Random.Range(0, itemInventory.Count);
+
+            if(Inventory.Instance.AddNewItemToFirstSlot(itemInventory[rd], 1))
+            {
+                itemInventory.RemoveAt(rd);
+            }
+        }
+    }
+
+    protected void SpeakToNPC()
+    {
+
     }
 }

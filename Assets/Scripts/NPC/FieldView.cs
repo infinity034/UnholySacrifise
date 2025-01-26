@@ -54,21 +54,16 @@ public class FieldView : MonoBehaviour
         {
             interactable = true;
             VigilanceZise();
-            Vector2 dir = collision.gameObject.transform.position - directionView.position;
+            Vector2 dir = target.position - transform.position;
             float angle = Vector3.Angle(dir, directionView.up);
             RaycastHit2D r = Physics2D.Raycast(directionView.position, dir, range);
-
             if (angle < angleView / 2)
             {
-                if (Vector2.Distance(directionView.position, collision.gameObject.transform.position) <= range)
+                if (Vector3.Distance(target.position, directionView.position) < range)
                 {
                     playerSeen = true;
                     Debug.DrawRay(directionView.position, dir, Color.red);
                     RotateToTarget(collision.gameObject.transform);
-                }
-                else
-                {
-                    playerSeen = false;
                 }
             }
             else

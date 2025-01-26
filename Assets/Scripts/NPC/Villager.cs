@@ -7,6 +7,7 @@ public class Villager : Patrol
     protected override void Start()
     {
         base.Start();
+        StartCoroutine(Interaction());
     }
 
     protected IEnumerator Interaction()
@@ -15,11 +16,18 @@ public class Villager : Patrol
         {
             if (fieldView.PlayerSeen && fieldView.Interactable)
             {
-                // Begin a Choice
+                if (PlayerController.Instance.PlayerControls.Player.Interact.IsPressed())
+                {
+                    SpeakToNPC();
+                }
             }
             else if(!fieldView.PlayerSeen && fieldView.Interactable) 
             {
-                // Can Steal
+                if (PlayerController.Instance.PlayerControls.Player.Interact.IsPressed())
+                {
+                    StealNPC();
+                    yield return new WaitForSeconds(1f);
+                }
             }
 
             yield return null;
