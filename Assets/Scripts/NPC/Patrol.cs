@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 
 public class Patrol : NPC
@@ -15,6 +16,12 @@ public class Patrol : NPC
 
     [SerializeField]
     protected bool patrolLoop, patrolReturn;
+
+    [SerializeField]
+    protected List<EventPatrol> eventPatrols;
+
+    [SerializeField]
+    protected EventPatrol currentEventPatrol;
 
     protected override void Start()
     {
@@ -37,29 +44,75 @@ public class Patrol : NPC
         InstantiateAPatrolPoint(true);
         while (this.gameObject.activeSelf)
         {
-            if (patrolPoints.Count == 1 && !zone.PlayerSeen)
+            if(eventPatrols.Count > 0)
             {
-                zone.RotateToTarget(viewPoint);
-            }
+                Debug.Log("1.1");
+                if (currentEventPatrol.patrolPoints.Count == 0)
+                {
+                    Debug.Log("1.11");
+                    foreach (EventPatrol ep in eventPatrols)
+                    {
+                        Debug.Log("1.12");
+                        if (DayClock.Instance.CurrentDay == ep.specificDay || ep.specificDay == 0)
+                        {
+                            Debug.Log("1.3");
+                            Debug.Log(DayClock.Instance.FillAmount + " == " + ep.TimeToProc);
+                            if (DayClock.Instance.FillAmount == ep.TimeToProc)
+                            {
+                                Debug.Log("1.4");
+                                currentPoint = 0;
+                                currentEventPatrol = ep;
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    Debug.Log("1.2");
+                    if (Vector3.Distance(body.position, currentEventPatrol.patrolPoints[currentPoint].position) <= 0.5f)
+                    {
+                        currentPoint++;
+                        if (currentPoint > currentEventPatrol.patrolPoints.Count - 1)
+                        {
+                            currentEventPatrol.patrolPoints.Clear();
+                        }
+                    }
+                    else
+                    {
+                        agent.SetDestination(currentEventPatrol.patrolPoints[currentPoint].position);
+                        MoveTo(currentEventPatrol.patrolPoints[currentPoint], currentEventPatrol.patrolPoints.Count);
+                        zone.RotateToTarget(currentEventPatrol.patrolPoints[currentPoint]);
+                    }
+                }
 
-            if (patrolPoints.Count > 1)
-            {
-                agent.isStopped = false;
-                agent.SetDestination(patrolPoints[currentPoint].position);
-                MoveTo(patrolPoints[currentPoint]);
             }
             else
             {
-                agent.isStopped = true;
-                Debug.Log("Waiting");
+                if (patrolPoints.Count == 1 && !zone.PlayerSeen)
+                {
+                    zone.RotateToTarget(viewPoint);
+                }
+
+                if (patrolPoints.Count > 1)
+                {
+                    agent.isStopped = false;
+                    agent.SetDestination(patrolPoints[currentPoint].position);
+                    MoveTo(patrolPoints[currentPoint], patrolPoints.Count);
+                }
+                else
+                {
+                    agent.isStopped = true;
+                    Debug.Log("Waiting");
+                }
             }
 
             yield return null;
         }
     }
 
-    protected virtual void MoveTo(Transform point, bool returnToPoint = false)
+    protected virtual void MoveTo(Transform point, int count, bool returnToPoint = false)
     {
+        zone.RotateToTarget(point);
         if (Vector3.Distance(body.position, point.position) <= 0.5f)
         {
             if (returnToPoint)
@@ -68,16 +121,16 @@ public class Patrol : NPC
             }
             else
             {
-                NewPoint(patrolLoop);
+                NewPoint(patrolLoop, count);
             }
         }
     }
 
-    protected void NewPoint(bool loop)
+    protected void NewPoint(bool loop, int count)
     {
         if(loop)
         {
-            if (currentPoint < patrolPoints.Count -1)
+            if (currentPoint < count -1)
             {
                 currentPoint++;
             }
@@ -90,7 +143,7 @@ public class Patrol : NPC
         {
             if(patrolReturn)
             {
-                if (currentPoint < patrolPoints.Count - 1)
+                if (currentPoint < count - 1)
                 {
                     currentPoint++;
                 }

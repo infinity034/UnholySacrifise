@@ -55,7 +55,7 @@ public class Cat : Patrol
             {
                 agent.isStopped = false;
                 agent.SetDestination(patrolPoints[currentPoint].position);
-                MoveTo(patrolPoints[currentPoint]);
+                MoveTo(patrolPoints[currentPoint], patrolPoints.Count);
             }
             else
             {

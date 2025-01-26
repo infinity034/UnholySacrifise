@@ -25,6 +25,8 @@ public class DayClock : MonoBehaviour
     private int count = 0;
 
     public float FillAmount { get { return imageFill.fillAmount; } }
+    public float DayTime { get { return dayTime; } }
+    public int CurrentDay { get { return day; } }
 
     private void Awake()
     {
