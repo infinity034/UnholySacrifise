@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -109,4 +110,57 @@ public class ImpactBar : MonoBehaviour
             fill.fillAmount = (amount / maxAmount);
         }
     }
+
+   //Façons alternative.
+    /*
+    public int action;
+    public int score;
+
+    [SerializeField] GameObject sword;
+
+    public void SubstractPoints()
+    {
+        score = score-action;
+        DisplayPoints();
+    }
+
+    public void AddPoints()
+    {
+        score= score+action;
+        DisplayPoints();
+    }
+
+    public void ResetPoints()
+    {
+        score = 0;
+        DisplayPoints();
+    }
+    
+    void DisplayPoints()
+    {
+        sword.transform.localPosition = new Vector3(0, action, 0);
+    }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

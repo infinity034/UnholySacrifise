@@ -21,17 +21,18 @@ public class PauseMenu : MonoBehaviour
 
     void OnEnable()
     {
-        //pauseGame.action.started += OpenPauseMenu;
+        pauseGame.action.started += OpenPauseMenu;
         Debug.Log("Done");
     }
 
     void OnDisable()
     {
-        //pauseGame.action.started -= OpenPauseMenu;
+        pauseGame.action.started -= OpenPauseMenu;
     }
 
-
-    private void OpenPauseMenu(PlayerControls.Player.OpenPauseMenu.trigerred)
+    
+    //Est appeller quand la touche ESC est press ( en temps normal...)
+    private void OpenPauseMenu(InputAction.CallbackContext context)
     {
         Debug.Log("TABARNAK");
     }

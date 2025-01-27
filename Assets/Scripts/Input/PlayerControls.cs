@@ -125,6 +125,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""920ed1c9-23f5-4fa5-a20e-3bad4eb17bbc"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -303,6 +312,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Mouse"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""78fc37ca-69df-4b62-9cd9-833232dcee03"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -322,6 +342,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Player_Slot6 = m_Player.FindAction("Slot 6", throwIfNotFound: true);
         m_Player_Slot7 = m_Player.FindAction("Slot 7", throwIfNotFound: true);
         m_Player_Mouse = m_Player.FindAction("Mouse", throwIfNotFound: true);
+        m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
     }
 
     ~@PlayerControls()
@@ -399,6 +420,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Slot6;
     private readonly InputAction m_Player_Slot7;
     private readonly InputAction m_Player_Mouse;
+    private readonly InputAction m_Player_Pause;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -414,6 +436,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Slot6 => m_Wrapper.m_Player_Slot6;
         public InputAction @Slot7 => m_Wrapper.m_Player_Slot7;
         public InputAction @Mouse => m_Wrapper.m_Player_Mouse;
+        public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -456,6 +479,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Mouse.started += instance.OnMouse;
             @Mouse.performed += instance.OnMouse;
             @Mouse.canceled += instance.OnMouse;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -493,6 +519,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Mouse.started -= instance.OnMouse;
             @Mouse.performed -= instance.OnMouse;
             @Mouse.canceled -= instance.OnMouse;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -523,5 +552,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnSlot6(InputAction.CallbackContext context);
         void OnSlot7(InputAction.CallbackContext context);
         void OnMouse(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }

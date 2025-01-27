@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Hiding : MonoBehaviour
 {
-[SerializeField] private GameObject Player;
-[SerializeField] private GameObject Hidingspot;
-private 
-private SpriteRenderer playerSpriteRenderer
+[SerializeField] private GameObject player;
+[SerializeField] private GameObject hidingspot;
+[SerializeField] private SpriteRenderer visual; 
+
+private Collider2D hittingZone;
+private SpriteRenderer playerSpriteRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
          playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
+         hittingZone=player.gameObject.GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -20,23 +23,32 @@ private SpriteRenderer playerSpriteRenderer
     {
         
     }
-    public void OnTriggerEnter2D(Colision){
-        Colision=Hidingspot.GetComponent<Collider2D>();
-        Player.localPosition=Hidingspot.localPosition;
+    public void OnTriggerEnter2D()
+    {
+       if(hittingZone==true)
+       {
+        Debug.Log("gotcha!");
+        HidePlayer();
+       }
+        
     }
     public void HidePlayer()
     {
-        if (playerSpriteRenderer != null)
-        {
-           playerSpriteRenderer.enabled = false; // Set to invisible
-        }
+        visual.enabled=false;
     }
 
-    public void ShowObject()
+    public void OnTriggerExit2D()
     {
-        if (playerSpriteRenderer != null)
-        {
-            playerSpriteRenderer.enabled = true; // Set visible
-        }
+       if(hittingZone==true)
+       {
+        Debug.Log("Seeya!");
+        ShowPlayer();
+       }
     }
+
+    void ShowPlayer()
+    {
+        visual.enabled=true;
+    }
+
 }
