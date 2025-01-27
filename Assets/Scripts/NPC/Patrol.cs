@@ -21,7 +21,7 @@ public class Patrol : NPC
     protected List<EventPatrol> eventPatrols;
 
     [SerializeField]
-    protected EventPatrol currentEventPatrol;
+    protected List<EventPatrol> currentEventPatrol;
 
     protected override void Start()
     {
@@ -46,7 +46,7 @@ public class Patrol : NPC
         {
             if(eventPatrols.Count > 0)
             {
-                if (currentEventPatrol.patrolPoints.Count == 0)
+                if (currentEventPatrol.Count == 0)
                 {
                     foreach (EventPatrol ep in eventPatrols)
                     {
@@ -56,26 +56,26 @@ public class Patrol : NPC
                             if (DayClock.Instance.FillAmount == ep.TimeToProc)
                             {
                                 currentPoint = 0;
-                                currentEventPatrol = ep;
+                                currentEventPatrol.Add(ep);
                             }
                         }
                     }
                 }
                 else
                 {
-                    if (Vector3.Distance(body.position, currentEventPatrol.patrolPoints[currentPoint].position) <= 0.5f)
+                    if (Vector3.Distance(body.position, currentEventPatrol[0].patrolPoints[currentPoint].position) <= 0.5f)
                     {
                         currentPoint++;
-                        if (currentPoint > currentEventPatrol.patrolPoints.Count - 1)
+                        if (currentPoint > currentEventPatrol[0].patrolPoints.Count - 1)
                         {
-                            currentEventPatrol.patrolPoints.Clear();
+                            currentEventPatrol.Clear();
                         }
                     }
                     else
                     {
-                        agent.SetDestination(currentEventPatrol.patrolPoints[currentPoint].position);
-                        MoveTo(currentEventPatrol.patrolPoints[currentPoint], currentEventPatrol.patrolPoints.Count);
-                        zone.RotateToTarget(currentEventPatrol.patrolPoints[currentPoint]);
+                        agent.SetDestination(currentEventPatrol[0].patrolPoints[currentPoint].position);
+                        MoveTo(currentEventPatrol[0].patrolPoints[currentPoint], currentEventPatrol[0].patrolPoints.Count);
+                        zone.RotateToTarget(currentEventPatrol[0].patrolPoints[currentPoint]);
                     }
                 }
 

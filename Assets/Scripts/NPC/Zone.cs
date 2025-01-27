@@ -54,12 +54,19 @@ public class Zone : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            VigilanceZise();
-            interactable = true;
-            playerSeen = npc.FieldView.PlayerSeen();
-            if (PlayerSeen)
+            if(GetComponentInParent<CabinGuard>() == null)
             {
-                RotateToTarget(target);
+                VigilanceZise();
+                interactable = true;
+                playerSeen = npc.FieldView.PlayerSeen();
+                if (PlayerSeen)
+                {
+                    RotateToTarget(target);
+                }
+            }
+            else
+            {
+                GetComponentInParent<CabinGuard>().playerSeen = npc.FieldView.PlayerSeen();
             }
         }
         else if (collision.gameObject.CompareTag("Door"))
@@ -85,10 +92,10 @@ public class Zone : MonoBehaviour
         }
     }
 
-    public void RotationView(Quaternion targetRotation)
+    public void RotationView(Quaternion targetRotation, float speed = 1000f)
     {
-        directionView.rotation = Quaternion.RotateTowards(directionView.rotation, targetRotation, 1000 * Time.deltaTime);
-        rotationView.rotation = Quaternion.RotateTowards(rotationView.rotation, targetRotation, 1000 * Time.deltaTime);
+        directionView.rotation = Quaternion.RotateTowards(directionView.rotation, targetRotation, speed * Time.deltaTime);
+        rotationView.rotation = Quaternion.RotateTowards(rotationView.rotation, targetRotation, speed * Time.deltaTime);
     }
 
     public void RotateToTarget(Transform target)
