@@ -6,7 +6,7 @@ using UnityEngine;
 public class Guard : Patrol
 {
     [SerializeField]
-    private Transform patrolPointBeforePlayerSeen;
+    protected Transform patrolPointBeforePlayerSeen;
 
     protected override void Start()
     {
@@ -48,7 +48,44 @@ public class Guard : Patrol
         InstantiateAPatrolPoint(true);
         while (this.gameObject.activeSelf)
         {
-            if(!zone.Interaction)
+            if (eventPatrols.Count > 0)
+            {
+                if (currentEventPatrol.Count == 0)
+                {
+                    foreach (EventPatrol ep in eventPatrols)
+                    {
+                        if (DayClock.Instance.CurrentDay == ep.specificDay || ep.specificDay == 0)
+                        {
+                            //Debug.Log(DayClock.Instance.FillAmount + " == " + ep.TimeToProc);
+                            if (DayClock.Instance.FillAmount == ep.TimeToProc)
+                            {
+                                currentPoint = 0;
+                                currentEventPatrol.Add(ep);
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    if (Vector3.Distance(body.position, currentEventPatrol[0].patrolPoints[currentPoint].position) <= 0.5f)
+                    {
+                        yield return new WaitForSeconds(currentEventPatrol[0].timeToWaitBetweenEveryPoint);
+                        currentPoint++;
+                        if (currentPoint > currentEventPatrol[0].patrolPoints.Count - 1)
+                        {
+                            currentEventPatrol.Clear();
+                        }
+                    }
+                    else
+                    {
+                        agent.SetDestination(currentEventPatrol[0].patrolPoints[currentPoint].position);
+                        MoveTo(currentEventPatrol[0].patrolPoints[currentPoint], currentEventPatrol[0].patrolPoints.Count);
+                        zone.RotateToTarget(currentEventPatrol[0].patrolPoints[currentPoint]);
+                    }
+                }
+
+            }
+            else if (!zone.Interaction)
             {
                 agent.isStopped = false;
 

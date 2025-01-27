@@ -13,14 +13,27 @@ public class ContactZone : MonoBehaviour
         {
             if (GetComponentInParent<NPC>().Zone.PlayerSeen)
             {
-                Debug.Log("Teleport");
-                Player.Instance.transform.position = playerForestTeleportPoint.position;
-                ImpactBar.Instance.ResetToZero();
-                if(!priestForestTeleportPoint && !priest)
-                {
-                    priest.Body.position = priestForestTeleportPoint.position;
-                }
+                TeleportPlayerAndPriestToForest();
             }
+        }
+        else if (collision.gameObject.CompareTag("Door"))
+        {
+
+        }
+    }
+
+    public void TeleportPlayerAndPriestToForest()
+    {
+        Debug.Log("Teleport");
+        Player.Instance.transform.position = playerForestTeleportPoint.position;
+        ImpactBar.Instance.ResetToZero();
+        if (priestForestTeleportPoint && priest)
+        {
+            priest.Body.position = priestForestTeleportPoint.position;
+        }
+        if (Library.Instance.Open)
+        {
+            Library.Instance.Use();
         }
     }
 }
