@@ -4,13 +4,18 @@ using UnityEngine;
 public class MovableFurniture : Furniture
 {
     [SerializeField]
-    private GameObject[] point;
+    protected GameObject mainGo;
 
     [SerializeField]
-    private bool open, moving;
+    protected GameObject[] point;
 
     [SerializeField]
-    private NPC npcInteraction;
+    protected bool open, moving;
+
+    [SerializeField]
+    protected NPC npcInteraction;
+
+    public bool Open { get { return open; } }
 
     protected override void OnTriggerStay2D(Collider2D collision)
     {
@@ -29,24 +34,26 @@ public class MovableFurniture : Furniture
         {
             if (open)
             {
-                transform.position = Vector3.MoveTowards(transform.position, point[1].transform.position, 0.8f * Time.deltaTime);
-                if (Vector3.Distance(transform.position, point[1].transform.position) < 0.001f)
+                mainGo.transform.position = Vector3.MoveTowards(mainGo.transform.position, point[1].transform.position, 0.8f * Time.deltaTime);
+                if (Vector3.Distance(mainGo.transform.position, point[1].transform.position) < 0.001f)
                 {
                     moving = false;
                     if (npcInteraction)
                     {
+                        npcInteraction.Agent.isStopped = false;
                         npcInteraction.Zone.Interaction = false;
                     }
                 }
             }
             else
             {
-                transform.position = Vector3.MoveTowards(transform.position, point[0].transform.position, 0.8f * Time.deltaTime);
-                if (Vector3.Distance(transform.position, point[0].transform.position) < 0.001f)
+                mainGo.transform.position = Vector3.MoveTowards(mainGo.transform.position, point[0].transform.position, 0.8f * Time.deltaTime);
+                if (Vector3.Distance(mainGo.transform.position, point[0].transform.position) < 0.001f)
                 {
                     moving = false;
                     if (npcInteraction)
                     {
+                        npcInteraction.Agent.isStopped = false;
                         npcInteraction.Zone.Interaction = false;
                     }
                 }
@@ -61,8 +68,13 @@ public class MovableFurniture : Furniture
     {
         if (!moving)
         {
+            Debug.Log("Use The Door");
             // Can Check If The NPC Has the Key, If Not Activatate NavMesh Obstacle
-            npcInteraction = npc;
+            if(npc != null)
+            {
+                npcInteraction = npc;
+                npc.Agent.isStopped = true;
+            }
             open = !open;
             moving = true;
             StartCoroutine(MoveLibrary());

@@ -33,6 +33,7 @@ public class NPC : MonoBehaviour
     public Transform Body {  get { return body; } }
     public FieldView FieldView { get { return fieldView; } }
     public Zone Zone { get { return zone; } }
+    public NavMeshAgent Agent { get { return agent; } }
 
     protected virtual void Start()
     {
@@ -40,11 +41,11 @@ public class NPC : MonoBehaviour
         agent.updateUpAxis = false;
     }
 
-    protected void RotateToTarget(Transform target)
+    protected void RotateToTarget(Transform target, float speed = 1000f)
     {
         float angle = Mathf.Atan2(target.position.y - body.position.y, target.position.x - body.position.x) * Mathf.Rad2Deg;
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
-        zone.RotationView(targetRotation);
+        zone.RotationView(targetRotation, speed);
     }
 
     protected void StealNPC()
@@ -61,8 +62,26 @@ public class NPC : MonoBehaviour
         }
     }
 
+    public bool AllItemNeed()
+    {
+        int count = 0; 
+
+        foreach(Item item in itemNeed)
+        {
+            foreach(Item i in itemInventory)
+            {
+                if(i == item)
+                {
+                    count++;
+                }
+            }
+        }
+
+        return count >= itemNeed.Count;
+    }
+
     protected void SpeakToNPC()
     {
-
+        Debug.Log("Speak");
     }
 }
