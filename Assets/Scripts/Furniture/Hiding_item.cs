@@ -6,16 +6,17 @@ public class Hiding : MonoBehaviour
 {
 [SerializeField] private GameObject player;
 [SerializeField] private GameObject hidingspot;
-[SerializeField] private SpriteRenderer visual; 
+[SerializeField] private SpriteRenderer playerVisual; 
+[SerializeField] private GameObject[] switchImg;
 
 private Collider2D hittingZone;
-private SpriteRenderer playerSpriteRenderer;
+
 
     // Start is called before the first frame update
     void Start()
     {
-         playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
          hittingZone=player.gameObject.GetComponent<BoxCollider2D>();
+         
     }
 
     // Update is called once per frame
@@ -34,7 +35,10 @@ private SpriteRenderer playerSpriteRenderer;
     }
     public void HidePlayer()
     {
-        visual.enabled=false;
+        playerVisual.enabled=false;
+        switchImg[0].GetComponent<SpriteRenderer>().enabled=false;
+        switchImg[1].GetComponent<SpriteRenderer>().enabled=true;
+       
     }
 
     public void OnTriggerExit2D()
@@ -48,7 +52,9 @@ private SpriteRenderer playerSpriteRenderer;
 
     void ShowPlayer()
     {
-        visual.enabled=true;
+        playerVisual.enabled=true;
+       switchImg[1].GetComponent<SpriteRenderer>().enabled=false;
+        switchImg[0].GetComponent<SpriteRenderer>().enabled=true;
     }
 
 }
