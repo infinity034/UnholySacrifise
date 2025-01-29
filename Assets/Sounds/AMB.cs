@@ -11,9 +11,10 @@ public class SFX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(OnTriggerEnter != null)
-        {
-          source.Play(clip);
-        }
+        
+    }
+    public void OnTriggerEnter(){
+      source.clip=clip;
+      source.Play();
     }
 }
