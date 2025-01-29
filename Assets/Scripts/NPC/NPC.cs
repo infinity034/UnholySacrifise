@@ -29,7 +29,8 @@ public class NPC : MonoBehaviour
 
     [SerializeField]
     protected int StealPoints;
-
+    public AudioSource talk;
+    public AudioSource steal;
     public Transform Body {  get { return body; } }
     public FieldView FieldView { get { return fieldView; } }
     public Zone Zone { get { return zone; } }
@@ -53,11 +54,12 @@ public class NPC : MonoBehaviour
         if (itemInventory.Count >= 1)
         {
             int rd = Random.Range(0, itemInventory.Count);
-
+            steal.Play();
             if(Inventory.Instance.AddNewItemToFirstSlot(itemInventory[rd], 1))
             {
                 itemInventory.RemoveAt(rd);
                 ImpactBar.Instance.SetImpactBar(5, false);
+                
             }
         }
     }
@@ -82,6 +84,7 @@ public class NPC : MonoBehaviour
 
     protected void SpeakToNPC()
     {
+        talk.Play();
         Debug.Log("Speak");
     }
 }
