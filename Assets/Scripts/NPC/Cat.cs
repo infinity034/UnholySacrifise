@@ -60,7 +60,7 @@ public class Cat : Patrol
             else
             {
                 agent.isStopped = true;
-                Debug.Log("Waiting");
+               // Debug.Log("Waiting");
             }
 
             yield return null;
