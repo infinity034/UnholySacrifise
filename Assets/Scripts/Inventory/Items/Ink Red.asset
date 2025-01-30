@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4877dca2ee94337449709d1e1d49f2df, type: 3}
+  m_Name: Ink Red
+  m_EditorClassIdentifier: 
+  itemGo: {fileID: 6212455263299475887, guid: 0eefa4fe5defc46459d5d6f89d738d0a, type: 3}
+  spriteIcon: {fileID: 21300000, guid: bb3638c4cabf5e14c903dde80e8e4020, type: 3}
+  canBeDrop: 0

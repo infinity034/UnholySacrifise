@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public enum Alignement { Good, Bad, Both}
 public class NPC : MonoBehaviour
@@ -29,6 +30,17 @@ public class NPC : MonoBehaviour
 
     [SerializeField]
     protected int StealPoints;
+    //Talk
+    [SerializeField] GameObject interactionMenu;
+    [SerializeField] GameObject activeText;
+    [SerializeField] GameObject activeName;
+    [SerializeField] GameObject activeImg;
+    [SerializeField] Sprite npc;
+    [SerializeField] string name;
+    [SerializeField] string[] Dialogue;
+    
+
+   //Audio
     public AudioSource talk;
     public AudioSource steal;
     public Transform Body {  get { return body; } }
@@ -40,6 +52,7 @@ public class NPC : MonoBehaviour
     {
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+        activeImg.GetComponent<Image>().sprite= npc;
     }
 
     protected void RotateToTarget(Transform target, float speed = 1000f)
@@ -85,6 +98,7 @@ public class NPC : MonoBehaviour
     protected void SpeakToNPC()
     {
         talk.Play();
+        interactionMenu.SetActive(true);
         Debug.Log("Speak");
     }
 }
