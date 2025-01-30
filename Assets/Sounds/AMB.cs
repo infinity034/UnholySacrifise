@@ -25,4 +25,9 @@ public class SFX : MonoBehaviour
        source.Play();
         
     }
+    public void OnTriggerExit2D(Collider2D collider)
+    {
+        source.Stop();
+
+    }
 }

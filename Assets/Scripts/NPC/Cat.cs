@@ -12,7 +12,8 @@ public class Cat : Patrol
 
     [SerializeField]
     protected GameObject fishLocated;
-
+    public AudioSource purr;
+    public AudioSource miaou;
     protected override void Start()
     {
         base.Start();
@@ -50,6 +51,8 @@ public class Cat : Patrol
                 agent.isStopped = false;
                 agent.SetDestination(fishLocated.transform.position);
                 zone.RotateToTarget(fishLocated.transform);
+                miaou.Play();
+
             }
             else if (patrolPoints.Count > 1)
             {
@@ -71,6 +74,7 @@ public class Cat : Patrol
     {
         isPetting = true;
         StartCoroutine(PetInteraction(timeBeforeRePet));
+        purr.Play();
     }
 
     protected IEnumerator PetInteraction(float delay)
