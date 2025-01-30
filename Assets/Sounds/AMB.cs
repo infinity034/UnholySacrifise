@@ -27,10 +27,7 @@ public class SFX : MonoBehaviour
     }
     public void OnTriggerExit2D(Collider2D collider)
     {
-<<<<<<< Updated upstream
-       source.Stop();
-=======
         source.Stop();
->>>>>>> Stashed changes
+
     }
 }
