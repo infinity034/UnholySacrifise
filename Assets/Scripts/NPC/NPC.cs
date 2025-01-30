@@ -43,6 +43,7 @@ public class NPC : MonoBehaviour
    //Audio
     public AudioSource talk;
     public AudioSource steal;
+    //
     public Transform Body {  get { return body; } }
     public FieldView FieldView { get { return fieldView; } }
     public Zone Zone { get { return zone; } }
@@ -71,7 +72,7 @@ public class NPC : MonoBehaviour
             if(Inventory.Instance.AddNewItemToFirstSlot(itemInventory[rd], 1))
             {
                 itemInventory.RemoveAt(rd);
-                ImpactBar.Instance.SetImpactBar(5, false);
+                ImpactBar.Instance.ActionPoints(5, false);
                 
             }
         }

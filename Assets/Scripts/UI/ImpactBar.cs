@@ -7,21 +7,96 @@ using UnityEngine.UI;
 public class ImpactBar : MonoBehaviour
 {
     public static ImpactBar Instance;
-
+    
     [SerializeField]
-    private Image goodFill, badFill;
+    private Slider goodFill, badFill;
 
-    [SerializeField]
-    private float goodAmount, badAmount, maxAmount;
+    private float badAmount, maxAmount, points;
 
     private void Awake()
     {
         Instance = this;
     }
 
-    public void SetImpactBar(float value, bool good)
+    public void ActionPoints(float value, bool good)
     {
-        if (good)
+        if(good== true){
+            points=points+value;
+        }
+        else if ( good==false){
+            points=points-value;
+        }
+       SetPoints();
+    }
+    public void SetPoints()
+    {
+        Debug.Log(points);
+        if(points>0){
+            badAmount=0;
+            goodFill.value=points;
+        }
+        else if( points<0){
+            badAmount=points*-1;
+            badFill.value=badAmount;
+        }
+        else{
+            badAmount=0;
+            points=0;
+            goodFill.value=points;
+            badFill.value=points;
+        }
+       
+    }
+  
+
+    public void ResetToZero()
+    {
+        points=0;
+        badAmount =0;
+       goodFill.value=0;
+       badFill.value=0;
+    }
+    public void TestPlus(){
+        ActionPoints(10,true);
+    }
+    public void TestMoins(){
+        ActionPoints(5,false);
+    }
+
+   
+
+   //Façons alternative.
+    /*
+    public int action;
+    public int score;
+
+    [SerializeField] GameObject sword;
+
+    public void SubstractPoints()
+    {
+        score = score-action;
+        DisplayPoints();
+    }
+
+    public void AddPoints()
+    {
+        score= score+action;
+        DisplayPoints();
+    }
+
+    public void ResetPoints()
+    {
+        score = 0;
+        DisplayPoints();
+    }
+    
+    void DisplayPoints()
+    {
+        sword.transform.localPosition = new Vector3(0, action, 0);
+    }*/
+
+
+/* if (good)
         {
             if (value < badAmount)
             {
@@ -79,17 +154,7 @@ public class ImpactBar : MonoBehaviour
                 badFill.fillAmount = 1;
             }
         }
-    }
-
-    public void ResetToZero()
-    {
-        goodAmount = 0;
-        StartCoroutine(FillOverTime(goodFill, goodAmount, false));
-        badAmount = 0;
-        StartCoroutine(FillOverTime(badFill, badAmount, false));
-    }
-
-    private IEnumerator FillOverTime(Image fill, float amount, bool add)
+         private IEnumerator FillOverTime(Image fill, float amount, bool add)
     {
         if (add)
         {
@@ -110,39 +175,9 @@ public class ImpactBar : MonoBehaviour
             fill.fillAmount = (amount / maxAmount);
         }
     }
-
-   //Façons alternative.
-    /*
-    public int action;
-    public int score;
-
-    [SerializeField] GameObject sword;
-
-    public void SubstractPoints()
-    {
-        score = score-action;
-        DisplayPoints();
-    }
-
-    public void AddPoints()
-    {
-        score= score+action;
-        DisplayPoints();
-    }
-
-    public void ResetPoints()
-    {
-        score = 0;
-        DisplayPoints();
-    }
-    
-    void DisplayPoints()
-    {
-        sword.transform.localPosition = new Vector3(0, action, 0);
-    }*/
-
-
-
+    StartCoroutine(FillOverTime(goodFill, goodAmount, false))
+     StartCoroutine(FillOverTime(badFill, badAmount, false));
+    */
 
 
 

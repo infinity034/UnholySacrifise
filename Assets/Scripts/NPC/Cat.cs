@@ -79,7 +79,7 @@ public class Cat : Patrol
 
     protected IEnumerator PetInteraction(float delay)
     {
-        ImpactBar.Instance.SetImpactBar(10, true);
+        ImpactBar.Instance.ActionPoints(10, true);
         yield return new WaitForSeconds(delay);
         isPetting = false;
     }
